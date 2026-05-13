@@ -453,9 +453,9 @@
 <!-- Navigation -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="/" class="nav-brand">🔮 Metacognition</a>
+    <a href="/metacognition/" class="nav-brand">🔮 Metacognition</a>
     <ul class="nav-links">
-      <li><a href="/">目录</a></li>
+      <li><a href="/metacognition/">目录</a></li>
       <li><a href="https://github.com/barretlee/metacognition" target="_blank">GitHub</a></li>
     </ul>
   </div>
@@ -493,7 +493,7 @@ function buildIndex(editions) {
   list.innerHTML = editions
     .sort((a, b) => b.date.localeCompare(a.date))
     .map(e => `
-      <a href="/?edition=${e.slug}" class="edition-card" onclick="event.preventDefault(); loadEdition('${e.slug}')">
+      <a href="/metacognition/?edition=${e.slug}" class="edition-card" onclick="event.preventDefault(); loadEdition('${e.slug}')">
         <div class="edition-number">#${String(e.num).padStart(3, '0')} · ${e.dateDisplay}</div>
         <div class="edition-title">${e.title}</div>
         <div class="edition-tags">${e.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
@@ -511,7 +511,7 @@ function showIndex() {
   document.getElementById('loading').classList.add('hidden');
   document.getElementById('index-view').classList.remove('hidden');
   document.getElementById('article-view').classList.add('hidden');
-  window.history.pushState({}, '', '/');
+  window.history.pushState({}, '', '/metacognition/');
 }
 
 function markdownToHTML(md) {
@@ -607,7 +607,7 @@ async function loadEdition(slug) {
     const container = document.getElementById('article-view');
     container.innerHTML = `
       <div class="article">
-        <a href="/" class="back-link" onclick="event.preventDefault(); showIndex()">← 返回目录</a>
+        <a href="/metacognition/" class="back-link" onclick="event.preventDefault(); showIndex()">← 返回目录</a>
         <div class="article-header">
           <div class="article-number">Edition #${String(fm.edition || '—').padStart(3, '0')}</div>
           <h1>${fm.title || 'Untitled'}</h1>
@@ -615,7 +615,7 @@ async function loadEdition(slug) {
         </div>
         <div class="article-body">${html}</div>
         <div style="margin-top:60px;padding-top:40px;border-top:1px solid var(--border);">
-          <a href="/" class="back-link" onclick="event.preventDefault(); showIndex()">← 返回目录</a>
+          <a href="/metacognition/" class="back-link" onclick="event.preventDefault(); showIndex()">← 返回目录</a>
         </div>
       </div>
     `;
@@ -623,7 +623,7 @@ async function loadEdition(slug) {
     document.getElementById('loading').classList.add('hidden');
     document.getElementById('index-view').classList.add('hidden');
     container.classList.remove('hidden');
-    window.history.pushState({}, '', `/?edition=${slug}`);
+    window.history.pushState({}, '', `/metacognition/?edition=${slug}`);
     window.scrollTo(0, 0);
   } catch (e) {
     console.error('Failed to load edition:', e);
