@@ -13,7 +13,8 @@
       "title": "大脑是一台幻觉机器 — 预测加工理论如何颠覆认知",
       "title_en": "Your Brain Is a Hallucination Engine — How Predictive Processing Rewrites Cognition",
       "tags": ["认知科学", "预测加工", "斯多葛", "FU Money", "昼夜节律", "银发经济"],
-      "tags_en": ["Cognitive Science", "Predictive Processing", "Stoicism", "FU Money", "Chronobiology", "Silver Economy"]
+      "tags_en": ["Cognitive Science", "Predictive Processing", "Stoicism", "FU Money", "Chronobiology", "Silver Economy"],
+      "slug_en": "brain-hallucination-engine"
     },
     {
       "slug": "2026-05-15",
@@ -23,7 +24,8 @@
       "title": "看不见的系统在运行你 — VO₂max、确认偏误、叙事传输与稀土博弈",
       "title_en": "Invisible Systems Running You — VO₂max, Confirmation Bias, Narrative Transportation & Rare Earths",
       "tags": ["运动科学", "VO₂max", "进化心理学", "确认偏误", "叙事传输", "叙事科学", "稀土", "地缘政治"],
-      "tags_en": ["Exercise Science", "VO₂max", "Evolutionary Psychology", "Confirmation Bias", "Narrative Transportation", "Storytelling", "Rare Earths", "Geopolitics"]
+      "tags_en": ["Exercise Science", "VO₂max", "Evolutionary Psychology", "Confirmation Bias", "Narrative Transportation", "Storytelling", "Rare Earths", "Geopolitics"],
+      "slug_en": "invisible-systems-running-you"
     }
   ]
 }

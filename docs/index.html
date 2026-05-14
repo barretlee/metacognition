@@ -513,6 +513,165 @@
   #comments .utterances {
     max-width: 100%;
   }
+
+  /* ── Search Modal ── */
+  .search-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 12vh;
+    animation: fadeIn 0.2s ease;
+  }
+
+  [data-theme="light"] .search-overlay {
+    background: rgba(0,0,0,0.25);
+  }
+
+  .search-modal {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    overflow: hidden;
+    animation: slideDown 0.25s ease;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .search-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .search-icon {
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+
+  .search-input {
+    flex: 1;
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text);
+    outline: none;
+    line-height: 1.5;
+  }
+
+  .search-input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .search-close {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: color 0.2s;
+    flex-shrink: 0;
+  }
+
+  .search-close:hover { color: var(--text); }
+
+  .search-results {
+    max-height: 50vh;
+    overflow-y: auto;
+    padding: 8px 0;
+  }
+
+  .search-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .search-result {
+    display: block;
+    padding: 14px 18px;
+    text-decoration: none;
+    transition: background 0.15s;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .search-result:last-child { border-bottom: none; }
+
+  .search-result:hover { background: var(--surface-hover); }
+
+  .search-result-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+
+  .search-result-title mark {
+    background: var(--accent-glow);
+    color: var(--accent);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .search-result-excerpt {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .search-result-excerpt mark {
+    background: var(--accent-glow);
+    color: var(--accent);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .search-result-meta {
+    font-family: 'JetBrains Mono', 'SF Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+
+  .search-footer {
+    padding: 8px 18px;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-align: right;
+  }
+
+  /* ── Comment Loading ── */
+  .comments-loading {
+    text-align: center;
+    padding: 24px 0;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', 'SF Mono', monospace;
+    font-size: 0.8rem;
+  }
 </style>
 </head>
 <body>
@@ -534,6 +693,9 @@
         <li><a href="/metacognition/" data-zh="目录" data-en="Index">目录</a></li>
         <li><a href="https://github.com/barretlee/metacognition" target="_blank">GitHub</a></li>
       </ul>
+      <button class="toggle-btn" id="search-btn" title="Search / 搜索" style="width:32px;text-align:center;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
       <button class="toggle-btn" id="lang-toggle" title="Switch language / 切换语言" style="width:32px;text-align:center;">中</button>
       <button class="toggle-btn" id="theme-toggle" title="Toggle theme / 切换主题" style="width:32px;text-align:center;">🌙</button>
     </div>
@@ -550,6 +712,23 @@
   </div>
   <div id="article-view" class="hidden"></div>
 </main>
+
+<!-- Search Modal -->
+<div class="search-overlay hidden" id="search-overlay">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="search-input" class="search-input" data-zh-placeholder="搜索文章..." data-en-placeholder="Search articles..." placeholder="搜索文章..." autocomplete="off">
+      <button class="search-close" id="search-close" title="Close">✕</button>
+    </div>
+    <div class="search-results" id="search-results">
+      <div class="search-empty" data-zh="输入关键词开始搜索" data-en="Type to search">输入关键词开始搜索</div>
+    </div>
+    <div class="search-footer">
+      <span data-zh="共" data-en="">共</span> <span id="search-count">0</span> <span data-zh="篇" data-en=" results">篇</span>
+    </div>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="footer-inner">
@@ -741,7 +920,8 @@ function buildIndex(eds) {
   list.innerHTML = eds.sort((a, b) => b.date.localeCompare(a.date)).map(e => {
     const title = currentLang === 'en' && e.title_en ? e.title_en : e.title;
     const tags = currentLang === 'en' && e.tags_en ? e.tags_en : e.tags;
-    return `<a href="${BASE_PATH}?edition=${e.slug}" class="edition-card" onclick="event.preventDefault();loadEdition('${e.slug}')">
+    const hrefSlug = e.slug_en || e.slug;
+    return `<a href="${BASE_PATH}${hrefSlug}" class="edition-card" onclick="event.preventDefault();loadEdition('${e.slug}')">
       <div class="edition-number">#${String(e.num).padStart(3,'0')} · ${e.dateDisplay}</div>
       <div class="edition-title">${title}</div>
       <div class="edition-tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
@@ -792,7 +972,11 @@ async function loadEdition(slug) {
     document.getElementById('article-view').classList.remove('hidden');
     applyLang();
     window.scrollTo(0, 0);
-    if (history.pushState) history.pushState(null, '', BASE_PATH + '?edition=' + slug);
+    if (history.pushState) {
+      const edMeta = editions.find(e => e.slug === slug);
+      const ps = edMeta && edMeta.slug_en ? edMeta.slug_en : slug;
+      history.pushState(null, '', BASE_PATH + ps);
+    }
     loadComments(slug);
   } catch (err) {
     document.getElementById('loading').innerHTML = '<span data-zh="加载失败" data-en="Load failed">加载失败</span>';
@@ -807,8 +991,9 @@ function loadComments(slug) {
   const container = document.getElementById('comments');
   if (!container) return;
 
-  // Clear previous
-  container.innerHTML = '';
+  // Show loading
+  container.innerHTML = '<div class="comments-loading"><span data-zh="加载评论中" data-en="Loading comments">加载评论中</span><span class="loading-dot">.</span><span class="loading-dot">.</span><span class="loading-dot">.</span></div>';
+  applyLang();
 
   // Create Utterances script
   const script = document.createElement('script');
@@ -816,25 +1001,62 @@ function loadComments(slug) {
   script.async = true;
   script.crossOrigin = 'anonymous';
   script.setAttribute('repo', 'barretlee/metacognition');
-  script.setAttribute('issue-term', 'pathname');
+  script.setAttribute('issue-term', slug);
   script.setAttribute('label', '💬 comment');
   script.setAttribute('theme', currentTheme === 'dark' ? 'photon-dark' : 'github-light');
+  script.onload = () => {
+    // Utterances will replace the loading div with its own iframe
+    commentsLoaded = true;
+  };
+  script.onerror = () => {
+    container.innerHTML = '<div class="comments-loading"><span data-zh="评论加载失败" data-en="Comments failed to load">评论加载失败</span></div>';
+    applyLang();
+  };
+  container.innerHTML = '';
   container.appendChild(script);
-  commentsLoaded = true;
 }
 
 // ── Init ──
 document.getElementById('lang-toggle').addEventListener('click', toggleLang);
 document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+document.getElementById('search-btn').addEventListener('click', openSearch);
+document.getElementById('search-close').addEventListener('click', closeSearch);
+document.getElementById('search-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeSearch();
+});
+document.getElementById('search-input').addEventListener('input', debounce(doSearch, 200));
+document.addEventListener('keydown', function(e) {
+  if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); openSearch(); }
+  if (e.key === 'Escape') closeSearch();
+});
 initTheme();
 initLang();
+
+// ── Resolve slug from URL ──
+function getSlugFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  // 404.html fallback: ?p=brain-hallucination-engine
+  let p = params.get('p');
+  if (p) return p;
+  // Backward compat: ?edition=2026-05-14
+  let ed = params.get('edition');
+  if (ed) return ed;
+  // Path-based: /metacognition/brain-hallucination-engine
+  let path = window.location.pathname.replace(/\/metacognition\//, '').replace(/\/$/, '');
+  if (path && path !== 'index.html') return path;
+  return null;
+}
 
 fetch(BASE_PATH + 'editions.json')
   .then(r => r.json())
   .then(data => {
     buildIndex(data.editions);
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('edition')) loadEdition(params.get('edition'));
+    const fromURL = getSlugFromURL();
+    if (fromURL) {
+      // Match by slug_en or slug
+      const ed = data.editions.find(e => e.slug_en === fromURL || e.slug === fromURL);
+      if (ed) loadEdition(ed.slug);
+    }
   })
   .catch(() => {
     document.getElementById('loading').innerHTML = '<span data-zh="加载失败" data-en="Load failed">加载失败</span>';
@@ -842,9 +1064,83 @@ fetch(BASE_PATH + 'editions.json')
   });
 
 window.addEventListener('popstate', () => {
-  const slug = new URLSearchParams(window.location.search).get('edition');
-  slug ? loadEdition(slug) : buildIndex(editions);
+  const fromURL = getSlugFromURL();
+  if (fromURL && editions.length) {
+    const ed = editions.find(e => e.slug_en === fromURL || e.slug === fromURL);
+    ed ? loadEdition(ed.slug) : buildIndex(editions);
+  } else {
+    buildIndex(editions);
+  }
 });
+
+// ── Search ──
+let searchIndex = null;
+
+async function openSearch() {
+  document.getElementById('search-overlay').classList.remove('hidden');
+  document.getElementById('search-input').focus();
+  // Load index on demand
+  if (!searchIndex) {
+    try {
+      const r = await fetch(BASE_PATH + 'search-index.json');
+      searchIndex = await r.json();
+    } catch(e) {}
+  }
+}
+
+function closeSearch() {
+  document.getElementById('search-overlay').classList.add('hidden');
+  document.getElementById('search-input').value = '';
+  document.getElementById('search-results').innerHTML = '<div class="search-empty" data-zh="输入关键词开始搜索" data-en="Type to search">输入关键词开始搜索</div>';
+  applyLang();
+  document.getElementById('search-count').textContent = '0';
+}
+
+function doSearch() {
+  const q = document.getElementById('search-input').value.trim().toLowerCase();
+  const resultsEl = document.getElementById('search-results');
+  if (!q || !searchIndex) {
+    resultsEl.innerHTML = '<div class="search-empty" data-zh="输入关键词开始搜索" data-en="Type to search">输入关键词开始搜索</div>';
+    applyLang();
+    document.getElementById('search-count').textContent = '0';
+    return;
+  }
+
+  const results = searchIndex.filter(item => {
+    const haystack = [item.title, item.title_en, ...item.tags, ...item.tags_en, item.excerpt || '', item.excerpt_en || ''].join(' ').toLowerCase();
+    return haystack.includes(q);
+  });
+
+  document.getElementById('search-count').textContent = results.length;
+
+  if (!results.length) {
+    resultsEl.innerHTML = '<div class="search-empty" data-zh="无匹配结果" data-en="No results">无匹配结果</div>';
+    applyLang();
+    return;
+  }
+
+  resultsEl.innerHTML = results.map(r => {
+    const title = currentLang === 'en' ? r.title_en : r.title;
+    const excerpt = currentLang === 'en' ? (r.excerpt_en || r.excerpt) : (r.excerpt || r.excerpt_en || '');
+    const hrefSlug = r.slug_en || r.slug;
+    return `<a href="${BASE_PATH}${hrefSlug}" class="search-result" onclick="event.preventDefault();closeSearch();loadEdition('${r.slug}')">
+      <div class="search-result-title">${highlight(title, q)}</div>
+      <div class="search-result-excerpt">${highlight(excerpt.substring(0, 150), q)}</div>
+      <div class="search-result-meta">${r.dateDisplay}</div>
+    </a>`;
+  }).join('');
+}
+
+function highlight(text, q) {
+  if (!q) return text;
+  const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+  return text.replace(re, '<mark>$1</mark>');
+}
+
+function debounce(fn, ms) {
+  let t;
+  return function() { clearTimeout(t); t = setTimeout(() => fn.apply(this, arguments), ms); };
+}
 </script>
 <script>
 if ('serviceWorker' in navigator) {
