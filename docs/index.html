@@ -503,6 +503,16 @@
   }
 
   .hidden { display: none !important; }
+
+  /* ── Comments (Utterances) ── */
+  #comments {
+    margin-top: 48px;
+    padding-top: 36px;
+    border-top: 1px solid var(--border);
+  }
+  #comments .utterances {
+    max-width: 100%;
+  }
 </style>
 </head>
 <body>
@@ -611,6 +621,12 @@ function toggleTheme() {
   currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
   setCookie('mc-theme', currentTheme, 365);
   applyTheme();
+  // Refresh comments if loaded
+  if (commentsLoaded && document.getElementById('comments').children.length > 0) {
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('edition');
+    if (slug) loadComments(slug);
+  }
 }
 function applyTheme() {
   document.documentElement.setAttribute('data-theme', currentTheme);
@@ -769,6 +785,7 @@ async function loadEdition(slug) {
           ${tagsHTML}
         </div>
         <div class="article-body">${parseMarkdown(body)}</div>
+        <div id="comments"></div>
       </article>`;
 
     document.getElementById('loading').classList.add('hidden');
@@ -776,10 +793,34 @@ async function loadEdition(slug) {
     applyLang();
     window.scrollTo(0, 0);
     if (history.pushState) history.pushState(null, '', BASE_PATH + '?edition=' + slug);
+    loadComments(slug);
   } catch (err) {
     document.getElementById('loading').innerHTML = '<span data-zh="加载失败" data-en="Load failed">加载失败</span>';
     applyLang();
   }
+}
+
+// ── Comments (Utterances) ──
+let commentsLoaded = false;
+
+function loadComments(slug) {
+  const container = document.getElementById('comments');
+  if (!container) return;
+
+  // Clear previous
+  container.innerHTML = '';
+
+  // Create Utterances script
+  const script = document.createElement('script');
+  script.src = 'https://utteranc.es/client.js';
+  script.async = true;
+  script.crossOrigin = 'anonymous';
+  script.setAttribute('repo', 'barretlee/metacognition');
+  script.setAttribute('issue-term', 'pathname');
+  script.setAttribute('label', '💬 comment');
+  script.setAttribute('theme', currentTheme === 'dark' ? 'photon-dark' : 'github-light');
+  container.appendChild(script);
+  commentsLoaded = true;
 }
 
 // ── Init ──
