@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><script>
-// SPA fallback: pass path via sessionStorage, redirect to clean root
+// SPA fallback: pass path via sessionStorage
+// zh: /metacognition/slug → sessionStorage: slug
+// en: /metacognition/en/slug → sessionStorage: en:slug
 (function(){
-  var path = window.location.pathname.replace(/\/metacognition\//, '').replace(/\/$/, '');
-  if (path && path !== 'index.html' && path !== '404.html') {
-    sessionStorage.setItem('mc-article', path);
-    window.location.replace('/metacognition/');
-  }
+  var raw = window.location.pathname.replace(/\/metacognition\//, '').replace(/\/$/, '');
+  if (!raw || raw === 'index.html' || raw === '404.html') return;
+  var key = raw;
+  if (raw.startsWith('en/')) key = 'en:' + raw.substring(3);
+  sessionStorage.setItem('mc-article', key);
+  window.location.replace('/metacognition/');
 })();
 </script></head></html>

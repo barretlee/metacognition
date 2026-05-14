@@ -791,10 +791,10 @@ function toggleLang() {
   setCookie('mc-lang', currentLang, 365);
   applyLang();
   // Derive slug from current URL path
-  const pathSlug = window.location.pathname.replace(/\/metacognition\//, '').replace(/\/$/, '');
-  const isArticleView = !document.getElementById('article-view').classList.contains('hidden');
+  var pathSlug = window.location.pathname.replace(/\/metacognition\//, '').replace(/\/$/, '').replace(/^en\//, '');
+  var isArticleView = !document.getElementById('article-view').classList.contains('hidden');
   if (isArticleView && pathSlug && pathSlug !== 'index.html') {
-    const ed = editions.find(e => e.slug_en === pathSlug || e.slug === pathSlug);
+    var ed = editions.find(e => e.slug_en === pathSlug || e.slug === pathSlug);
     if (ed) loadEdition(ed.slug);
   } else if (!isArticleView) {
     buildIndex(editions);
@@ -826,10 +826,9 @@ function toggleTheme() {
   applyTheme();
   // Refresh comments if loaded
   if (commentsLoaded && document.getElementById('comments').children.length > 0) {
-    // Derive slug from current URL path
-    const pathSlug = window.location.pathname.replace(/\/metacognition\//, '').replace(/\/$/, '');
+    var pathSlug = window.location.pathname.replace(/\/metacognition\//, '').replace(/\/$/, '').replace(/^en\//, '');
     if (pathSlug && pathSlug !== 'index.html') {
-      const ed = editions.find(e => e.slug_en === pathSlug || e.slug === pathSlug);
+      var ed = editions.find(e => e.slug_en === pathSlug || e.slug === pathSlug);
       if (ed) loadComments(ed.slug);
     }
   }
@@ -948,7 +947,8 @@ function buildIndex(eds) {
     const title = currentLang === 'en' && e.title_en ? e.title_en : e.title;
     const tags = currentLang === 'en' && e.tags_en ? e.tags_en : e.tags;
     const hrefSlug = e.slug_en || e.slug;
-    return `<a href="${BASE_PATH}${hrefSlug}" class="edition-card" onclick="event.preventDefault();loadEdition('${e.slug}')">
+    const langPfx = currentLang === 'en' ? 'en/' : '';
+    return `<a href="${BASE_PATH}${langPfx}${hrefSlug}" class="edition-card" onclick="event.preventDefault();loadEdition('${e.slug}')">
       <div class="edition-number">${e.dateDisplay}</div>
       <div class="edition-title">${title}</div>
       <div class="edition-tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
@@ -1018,8 +1018,9 @@ async function loadEdition(slug) {
     // Clean URL: never leave ?p= residue in address bar
     const edMeta2 = editions.find(e => e.slug === slug);
     const cleanPath = edMeta2 && edMeta2.slug_en ? edMeta2.slug_en : slug;
+    const langPrefix = currentLang === 'en' ? 'en/' : '';
     if (history.replaceState) {
-      history.replaceState(null, '', BASE_PATH + cleanPath);
+      history.replaceState(null, '', BASE_PATH + langPrefix + cleanPath);
     }
 
     // Dynamic title & SEO
@@ -1028,7 +1029,7 @@ async function loadEdition(slug) {
     document.querySelector('meta[name="description"]').setAttribute('content', (edMeta2 ? edMeta2.title : title) + '。跨域思考，破界认知。');
     document.querySelector('meta[property="og:title"]').setAttribute('content', title + ' — 破界期刊');
     document.querySelector('meta[property="og:description"]').setAttribute('content', (edMeta2 ? edMeta2.title : title));
-    document.querySelector('meta[property="og:url"]').setAttribute('content', 'https://barretlee.github.io' + BASE_PATH + cleanPath);
+    document.querySelector('meta[property="og:url"]').setAttribute('content', 'https://barretlee.github.io' + BASE_PATH + langPrefix + cleanPath);
     document.querySelector('meta[name="twitter:title"]').setAttribute('content', title + ' — 破界期刊');
     document.querySelector('meta[name="twitter:description"]').setAttribute('content', (edMeta2 ? edMeta2.title : title));
 
@@ -1101,14 +1102,26 @@ initLang();
 // ── Resolve slug from URL or sessionStorage ──
 function getSlugFromURL() {
   // sessionStorage pass from 404.html (no ?p= flash)
+  // Format: "slug" for zh, "en:slug" for en
   var ss = sessionStorage.getItem('mc-article');
-  if (ss) { sessionStorage.removeItem('mc-article'); return ss; }
+  if (ss) {
+    sessionStorage.removeItem('mc-article');
+    if (ss.startsWith('en:')) {
+      currentLang = 'en'; setCookie('mc-lang', 'en', 365); applyLang();
+      return ss.substring(3);
+    }
+    return ss;
+  }
   // Backward compat: ?p= or ?edition=
   const params = new URLSearchParams(window.location.search);
   let p = params.get('p') || params.get('edition');
   if (p) return p;
-  // Path-based: /metacognition/brain-hallucination-engine
+  // Path-based: /metacognition/{slug} or /metacognition/en/{slug}
   let path = window.location.pathname.replace(/\/metacognition\//, '').replace(/\/$/, '');
+  if (path.startsWith('en/')) {
+    currentLang = 'en'; setCookie('mc-lang', 'en', 365); applyLang();
+    return path.substring(3);
+  }
   if (path && path !== 'index.html') return path;
   return null;
 }
@@ -1189,7 +1202,8 @@ function doSearch() {
     const title = currentLang === 'en' ? r.title_en : r.title;
     const excerpt = currentLang === 'en' ? (r.excerpt_en || r.excerpt) : (r.excerpt || r.excerpt_en || '');
     const hrefSlug = r.slug_en || r.slug;
-    return `<a href="${BASE_PATH}${hrefSlug}" class="search-result" onclick="event.preventDefault();closeSearch();loadEdition('${r.slug}')">
+    const langPfx = currentLang === 'en' ? 'en/' : '';
+    return `<a href="${BASE_PATH}${langPfx}${hrefSlug}" class="search-result" onclick="event.preventDefault();closeSearch();loadEdition('${r.slug}')">
       <div class="search-result-title">${highlight(title, q)}</div>
       <div class="search-result-excerpt">${highlight(excerpt.substring(0, 150), q)}</div>
       <div class="search-result-meta">${r.dateDisplay}</div>
