@@ -1033,7 +1033,7 @@ async function loadEdition(slug) {
     document.querySelector('meta[name="twitter:title"]').setAttribute('content', title + ' — 破界期刊');
     document.querySelector('meta[name="twitter:description"]').setAttribute('content', (edMeta2 ? edMeta2.title : title));
 
-    showCommentTrigger(slug);
+    loadComments(slug);
   } catch (err) {
     document.getElementById('loading').innerHTML = '<span data-zh="加载失败" data-en="Load failed">加载失败</span>';
     applyLang();
@@ -1224,7 +1224,19 @@ function debounce(fn, ms) {
 </script>
 <script>
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/metacognition/sw.js');
+  navigator.serviceWorker.register('/metacognition/sw.js').then(function(reg) {
+    reg.addEventListener('updatefound', function() {
+      var newWorker = reg.installing;
+      newWorker.addEventListener('statechange', function() {
+        if (newWorker.state === 'activated' && navigator.serviceWorker.controller) {
+          // New SW took over — reload to get fresh content
+          window.location.reload();
+        }
+      });
+    });
+  });
+  // Check for updates every time the page loads
+  navigator.serviceWorker.ready.then(function(reg) { reg.update(); });
 }
 </script>
 </body>
