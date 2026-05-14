@@ -1039,44 +1039,44 @@ async function loadEdition(slug) {
   }
 }
 
-// ── Comments (Utterances with manual trigger to avoid popup blocking) ──
+// ── Comments (Giscus — GitHub Discussions, better SPA/OAuth support) ──
 let commentsLoaded = false;
 
 function showCommentTrigger(slug) {
   const container = document.getElementById('comments');
   if (!container) return;
-  container.innerHTML = `
-    <div class="comments-trigger" onclick="loadComments('${slug}')" style="cursor:pointer;text-align:center;padding:24px;border:1px dashed var(--border);border-radius:8px;transition:all 0.2s"
-         onmouseenter="this.style.borderColor='var(--accent)';this.style.background='var(--accent-glow)'"
-         onmouseleave="this.style.borderColor='var(--border)';this.style.background='transparent'">
-      <span style="font-size:1.2rem">💬</span>
-      <span data-zh="点击加载评论" data-en="Click to load comments" style="display:block;margin-top:6px;color:var(--text-secondary);font-family:'JetBrains Mono',monospace;font-size:0.8rem">点击加载评论</span>
-      <span style="display:block;margin-top:4px;color:var(--text-muted);font-size:0.68rem" data-zh="使用 GitHub 账号登录评论 · 如弹出窗口被拦截请允许 barretlee.github.io" data-en="Sign in with GitHub · Allow popups for barretlee.github.io if blocked">使用 GitHub 账号登录评论 · 如弹出窗口被拦截请允许</span>
-    </div>`;
+  container.innerHTML = '<div class="comments-trigger" id="comment-trigger" style="cursor:pointer;text-align:center;padding:24px;border:1px dashed var(--border);border-radius:8px;transition:all 0.2s" onmouseenter="this.style.borderColor=\'var(--accent)\';this.style.background=\'var(--accent-glow)\'" onmouseleave="this.style.borderColor=\'var(--border)\';this.style.background=\'transparent\'"><span style="font-size:1.2rem">💬</span><span data-zh="点击加载评论" data-en="Click to load comments" style="display:block;margin-top:6px;color:var(--text-secondary);font-family:\'JetBrains Mono\',monospace;font-size:0.8rem">点击加载评论</span><span style="display:block;margin-top:4px;color:var(--text-muted);font-size:0.68rem" data-zh="使用 GitHub 登录（首次需授权 Giscus App）" data-en="Sign in with GitHub (first time requires Giscus App authorization)">使用 GitHub 登录（首次需授权 Giscus App）</span></div>';
   applyLang();
+  document.getElementById('comment-trigger').onclick = function() { loadComments(slug); };
 }
 
 function loadComments(slug) {
-  const container = document.getElementById('comments');
+  var container = document.getElementById('comments');
   if (!container) return;
 
-  // Show loading
   container.innerHTML = '<div class="comments-loading"><span data-zh="加载评论中" data-en="Loading comments">加载评论中</span><span class="loading-dot">.</span><span class="loading-dot">.</span><span class="loading-dot">.</span></div>';
   applyLang();
 
-  const script = document.createElement('script');
-  script.src = 'https://utteranc.es/client.js';
+  var script = document.createElement('script');
+  script.src = 'https://giscus.app/client.js';
   script.async = true;
   script.crossOrigin = 'anonymous';
-  script.setAttribute('repo', 'barretlee/metacognition');
-  script.setAttribute('issue-term', 'pathname');
-  script.setAttribute('label', '💬 comment');
-  script.setAttribute('theme', currentTheme === 'dark' ? 'photon-dark' : 'github-light');
-  script.onload = () => {
-    commentsLoaded = true;
-  };
-  script.onerror = () => {
-    container.innerHTML = '<div class="comments-loading"><span data-zh="评论加载失败，请刷新后重试" data-en="Comments failed to load. Please refresh.">评论加载失败，请刷新后重试</span><br><span style="font-size:0.7rem;color:var(--text-muted)" data-zh="如弹出窗口被拦截，请在地址栏点击允许弹窗，再重新加载" data-en="If popup blocked, allow popups in address bar and reload"></span></div>';
+  script.setAttribute('data-repo', 'barretlee/metacognition');
+  script.setAttribute('data-repo-id', 'R_kgDOScmq9A');
+  script.setAttribute('data-category', 'General');
+  script.setAttribute('data-category-id', 'DIC_kwDOScmq9M4C9AvN');
+  script.setAttribute('data-mapping', 'specific');
+  script.setAttribute('data-term', slug);
+  script.setAttribute('data-strict', '0');
+  script.setAttribute('data-reactions-enabled', '1');
+  script.setAttribute('data-emit-metadata', '0');
+  script.setAttribute('data-input-position', 'bottom');
+  script.setAttribute('data-theme', 'preferred_color_scheme');
+  script.setAttribute('data-lang', 'zh-CN');
+  script.setAttribute('data-loading', 'lazy');
+  script.onload = function() { commentsLoaded = true; };
+  script.onerror = function() {
+    container.innerHTML = '<div class="comments-loading"><span data-zh="评论加载失败，请刷新后重试" data-en="Comments failed. Refresh and retry.">评论加载失败，请刷新后重试</span><br><span style="font-size:0.7rem;color:var(--text-muted)" data-zh="首次使用需在弹窗中授权 Giscus GitHub App" data-en="First use requires authorizing the Giscus GitHub App"></span></div>';
     applyLang();
   };
   container.appendChild(script);
