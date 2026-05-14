@@ -3,9 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔮 Metacognition — 破界日报</title>
+<title>🔮 Metacognition — 破界</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/metacognition/fonts.css">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+/*
+   Fonts: Latin self-hosted (zero external requests), Chinese via CDN with unicode-range.
+   See fonts.css for @font-face declarations.
+ */
 
   /* ── Dark Theme (default) ── */
   :root, [data-theme="dark"] {
@@ -504,9 +509,9 @@
 
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge" data-zh="每日破界 · Daily Edition" data-en="Daily Edition · Break Your Bubble">每日破界 · Daily Edition</div>
+    <div class="hero-badge" data-zh="破界期刊 · Horizon Journal" data-en="Horizon Journal · Break Your Bubble">破界期刊 · Horizon Journal</div>
     <h1>Metacognition</h1>
-    <p class="hero-subtitle" data-zh="破界日报 — 每天一件认知之外的事。认知科学、哲学、投资、陌生领域，跳出思维舒适区。" data-en="Daily cognitive horizon expansion. Science, philosophy, investing, unfamiliar domains — one eye-opening read at a time.">破界日报 — 每天一件认知之外的事。认知科学、哲学、投资、陌生领域，跳出思维舒适区。</p>
+    <p class="hero-subtitle" data-zh="破界期刊 — 每天一件认知之外的事。认知科学、哲学、投资、陌生领域，跳出思维舒适区。" data-en="Horizon Journal — One cognitive horizon, expanded daily. Science, philosophy, investing, unfamiliar domains.">破界期刊 — 每天一件认知之外的事。认知科学、哲学、投资、陌生领域，跳出思维舒适区。</p>
     <p class="hero-quote" data-zh="“认知的边界，不在于知道多少，而在于敢于面对多少未知。”" data-en="“The boundary of cognition is not how much you know, but how much unknown you dare to face.”">“认知的边界，不在于知道多少，而在于敢于面对多少未知。”</p>
   </div>
 </section>
@@ -799,6 +804,11 @@ window.addEventListener('popstate', () => {
   const slug = new URLSearchParams(window.location.search).get('edition');
   slug ? loadEdition(slug) : buildIndex(editions);
 });
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/metacognition/sw.js');
+}
 </script>
 </body>
 </html>

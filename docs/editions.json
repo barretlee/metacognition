@@ -1,8 +1,8 @@
 {
-  "name": "Metacognition — 破界日报",
-  "name_en": "Metacognition — Daily Horizon",
+  "name": "Metacognition — 破界",
+  "name_en": "Metacognition — Horizon",
   "description": "每天一件认知之外的事。认知科学、哲学、投资、陌生领域，跳出思维舒适区。",
-  "description_en": "Daily cognitive horizon expansion. Science, philosophy, investing, unfamiliar domains — one eye-opening read at a time.",
+  "description_en": "Horizon Journal — One cognitive horizon, expanded daily. Science, philosophy, investing, unfamiliar domains.",
   "updated": "2026-05-14",
   "editions": [
     {
@@ -10,8 +10,8 @@
       "num": 1,
       "date": "2026-05-14",
       "dateDisplay": "2026年5月14日",
-      "title": "🔮 破界日报 #001 — 大脑是一台幻觉机器",
-      "title_en": "🔮 Edition #001 — Your Brain Is a Hallucination Engine",
+      "title": "大脑是一台幻觉机器 — 预测加工理论如何颠覆认知",
+      "title_en": "Your Brain Is a Hallucination Engine — How Predictive Processing Rewrites Cognition",
       "tags": ["认知科学", "预测加工", "斯多葛", "FU Money", "昼夜节律", "银发经济"],
       "tags_en": ["Cognitive Science", "Predictive Processing", "Stoicism", "FU Money", "Chronobiology", "Silver Economy"]
     }
