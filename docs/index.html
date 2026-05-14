@@ -3,7 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔮 Metacognition — 破界</title>
+<title id="page-title">Metacognition — 破界</title>
+<meta name="description" content="破界期刊 — 认知之外，思维之疆。跨域思考认知科学、哲学、投资、陌生领域。">
+<link rel="icon" type="image/x-icon" href="/metacognition/favicon.ico">
+<link rel="canonical" href="https://barretlee.github.io/metacognition/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Metacognition — 破界">
+<meta property="og:title" content="Metacognition — 破界期刊">
+<meta property="og:description" content="认知之外，思维之疆。跨域思考认知科学、哲学、投资、陌生领域。">
+<meta property="og:url" content="https://barretlee.github.io/metacognition/">
+<meta property="og:image" content="https://barretlee.github.io/metacognition/favicon.ico">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Metacognition — 破界期刊">
+<meta name="twitter:description" content="认知之外，思维之疆。跨域思考认知科学、哲学、投资、陌生领域。">
+<meta name="twitter:image" content="https://barretlee.github.io/metacognition/favicon.ico">
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Metacognition — 破界",
+  "url": "https://barretlee.github.io/metacognition/",
+  "description": "认知之外，思维之疆。跨域思考认知科学、哲学、投资、陌生领域。",
+  "author": { "@type": "Person", "name": "Barret Lee", "url": "https://www.barretlee.com" }
+}
+</script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="/metacognition/fonts.css">
 <style>
@@ -693,11 +719,11 @@
         <li><a href="/metacognition/" data-zh="目录" data-en="Index">目录</a></li>
         <li><a href="https://github.com/barretlee/metacognition" target="_blank">GitHub</a></li>
       </ul>
-      <button class="toggle-btn" id="search-btn" title="Search / 搜索" style="width:32px;text-align:center;">
+      <button class="toggle-btn" id="search-btn" title="Search / 搜索" style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </button>
-      <button class="toggle-btn" id="lang-toggle" title="Switch language / 切换语言" style="width:32px;text-align:center;">中</button>
-      <button class="toggle-btn" id="theme-toggle" title="Toggle theme / 切换主题" style="width:32px;text-align:center;">🌙</button>
+      <button class="toggle-btn" id="lang-toggle" title="Switch language / 切换语言" style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;">中</button>
+      <button class="toggle-btn" id="theme-toggle" title="Toggle theme / 切换主题" style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;">🌙</button>
     </div>
   </div>
 </nav>
@@ -764,16 +790,14 @@ function toggleLang() {
   currentLang = currentLang === 'zh' ? 'en' : 'zh';
   setCookie('mc-lang', currentLang, 365);
   applyLang();
-  // Reload article if viewing one
-  const params = new URLSearchParams(window.location.search);
-  const slug = params.get('edition');
-  if (slug && !document.getElementById('index-view').classList.contains('hidden') === false) {
-    // We're on article view — check
-  }
-  if (!document.getElementById('index-view').classList.contains('hidden')) {
+  // Derive slug from current URL path
+  const pathSlug = window.location.pathname.replace(/\/metacognition\//, '').replace(/\/$/, '');
+  const isArticleView = !document.getElementById('article-view').classList.contains('hidden');
+  if (isArticleView && pathSlug && pathSlug !== 'index.html') {
+    const ed = editions.find(e => e.slug_en === pathSlug || e.slug === pathSlug);
+    if (ed) loadEdition(ed.slug);
+  } else if (!isArticleView) {
     buildIndex(editions);
-  } else if (slug) {
-    loadEdition(slug);
   }
 }
 function applyLang() {
@@ -802,9 +826,12 @@ function toggleTheme() {
   applyTheme();
   // Refresh comments if loaded
   if (commentsLoaded && document.getElementById('comments').children.length > 0) {
-    const params = new URLSearchParams(window.location.search);
-    const slug = params.get('edition');
-    if (slug) loadComments(slug);
+    // Derive slug from current URL path
+    const pathSlug = window.location.pathname.replace(/\/metacognition\//, '').replace(/\/$/, '');
+    if (pathSlug && pathSlug !== 'index.html') {
+      const ed = editions.find(e => e.slug_en === pathSlug || e.slug === pathSlug);
+      if (ed) loadComments(ed.slug);
+    }
   }
 }
 function applyTheme() {
@@ -930,6 +957,12 @@ function buildIndex(eds) {
   document.getElementById('loading').classList.add('hidden');
   document.getElementById('index-view').classList.remove('hidden');
   document.getElementById('article-view').classList.add('hidden');
+  // Reset title & SEO
+  document.getElementById('page-title').textContent = 'Metacognition — 破界';
+  document.title = 'Metacognition — 破界';
+  document.querySelector('meta[name="description"]').setAttribute('content', '破界期刊 — 认知之外，思维之疆。跨域思考认知科学、哲学、投资、陌生领域。');
+  document.querySelector('meta[property="og:title"]').setAttribute('content', 'Metacognition — 破界期刊');
+  document.querySelector('meta[property="og:url"]').setAttribute('content', 'https://barretlee.github.io/metacognition/');
   window.scrollTo(0, 0);
 }
 
@@ -964,40 +997,73 @@ async function loadEdition(slug) {
         </div>
         <div class="article-body">${parseMarkdown(body)}</div>
         <div id="comments"></div>
-      </article>`;
+      </article>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "${title.replace(/"/g, '\\"')}",
+        "datePublished": "${dateDisplay}",
+        "author": { "@type": "Person", "name": "Barret Lee", "url": "https://www.barretlee.com" },
+        "publisher": { "@type": "Person", "name": "Barret Lee", "url": "https://www.barretlee.com" },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://barretlee.github.io/metacognition/" }
+      }
+      </script>`;
 
     document.getElementById('loading').classList.add('hidden');
     document.getElementById('article-view').classList.remove('hidden');
     applyLang();
     window.scrollTo(0, 0);
-    if (history.pushState) {
-      const edMeta = editions.find(e => e.slug === slug);
-      const ps = edMeta && edMeta.slug_en ? edMeta.slug_en : slug;
-      history.pushState(null, '', BASE_PATH + ps);
+
+    // Clean URL: never leave ?p= residue in address bar
+    const edMeta2 = editions.find(e => e.slug === slug);
+    const cleanPath = edMeta2 && edMeta2.slug_en ? edMeta2.slug_en : slug;
+    if (history.replaceState) {
+      history.replaceState(null, '', BASE_PATH + cleanPath);
     }
-    loadComments(slug);
+
+    // Dynamic title & SEO
+    document.getElementById('page-title').textContent = title + ' — 破界';
+    document.title = title + ' — 破界';
+    document.querySelector('meta[name="description"]').setAttribute('content', (edMeta2 ? edMeta2.title : title) + '。跨域思考，破界认知。');
+    document.querySelector('meta[property="og:title"]').setAttribute('content', title + ' — 破界期刊');
+    document.querySelector('meta[property="og:description"]').setAttribute('content', (edMeta2 ? edMeta2.title : title));
+    document.querySelector('meta[property="og:url"]').setAttribute('content', 'https://barretlee.github.io' + BASE_PATH + cleanPath);
+    document.querySelector('meta[name="twitter:title"]').setAttribute('content', title + ' — 破界期刊');
+    document.querySelector('meta[name="twitter:description"]').setAttribute('content', (edMeta2 ? edMeta2.title : title));
+
+    showCommentTrigger(slug);
   } catch (err) {
     document.getElementById('loading').innerHTML = '<span data-zh="加载失败" data-en="Load failed">加载失败</span>';
     applyLang();
   }
 }
 
-// ── Comments (Utterances) ──
+// ── Comments (Utterances with manual trigger to avoid popup blocking) ──
 let commentsLoaded = false;
+
+function showCommentTrigger(slug) {
+  const container = document.getElementById('comments');
+  if (!container) return;
+  container.innerHTML = `
+    <div class="comments-trigger" onclick="loadComments('${slug}')" style="cursor:pointer;text-align:center;padding:24px;border:1px dashed var(--border);border-radius:8px;transition:all 0.2s"
+         onmouseenter="this.style.borderColor='var(--accent)';this.style.background='var(--accent-glow)'"
+         onmouseleave="this.style.borderColor='var(--border)';this.style.background='transparent'">
+      <span style="font-size:1.2rem">💬</span>
+      <span data-zh="点击加载评论" data-en="Click to load comments" style="display:block;margin-top:6px;color:var(--text-secondary);font-family:'JetBrains Mono',monospace;font-size:0.8rem">点击加载评论</span>
+      <span style="display:block;margin-top:4px;color:var(--text-muted);font-size:0.68rem" data-zh="使用 GitHub 账号登录评论 · 如弹出窗口被拦截请允许 barretlee.github.io" data-en="Sign in with GitHub · Allow popups for barretlee.github.io if blocked">使用 GitHub 账号登录评论 · 如弹出窗口被拦截请允许</span>
+    </div>`;
+  applyLang();
+}
 
 function loadComments(slug) {
   const container = document.getElementById('comments');
   if (!container) return;
 
   // Show loading
-  const loadingEl = document.createElement('div');
-  loadingEl.className = 'comments-loading';
-  loadingEl.innerHTML = '<span data-zh="加载评论中" data-en="Loading comments">加载评论中</span><span class="loading-dot">.</span><span class="loading-dot">.</span><span class="loading-dot">.</span>';
-  container.innerHTML = '';
-  container.appendChild(loadingEl);
+  container.innerHTML = '<div class="comments-loading"><span data-zh="加载评论中" data-en="Loading comments">加载评论中</span><span class="loading-dot">.</span><span class="loading-dot">.</span><span class="loading-dot">.</span></div>';
   applyLang();
 
-  // Create Utterances script
   const script = document.createElement('script');
   script.src = 'https://utteranc.es/client.js';
   script.async = true;
@@ -1007,15 +1073,10 @@ function loadComments(slug) {
   script.setAttribute('label', '💬 comment');
   script.setAttribute('theme', currentTheme === 'dark' ? 'photon-dark' : 'github-light');
   script.onload = () => {
-    // Utterances creates its own iframe — remove only our loading element
-    if (loadingEl && loadingEl.parentNode === container) {
-      container.removeChild(loadingEl);
-    }
     commentsLoaded = true;
-    // Utterances iframe gets appended to the container, keep it
   };
   script.onerror = () => {
-    container.innerHTML = '<div class="comments-loading"><span data-zh="评论加载失败，请刷新后重试" data-en="Comments failed to load. Please refresh.">评论加载失败，请刷新后重试</span></div>';
+    container.innerHTML = '<div class="comments-loading"><span data-zh="评论加载失败，请刷新后重试" data-en="Comments failed to load. Please refresh.">评论加载失败，请刷新后重试</span><br><span style="font-size:0.7rem;color:var(--text-muted)" data-zh="如弹出窗口被拦截，请在地址栏点击允许弹窗，再重新加载" data-en="If popup blocked, allow popups in address bar and reload"></span></div>';
     applyLang();
   };
   container.appendChild(script);
@@ -1037,15 +1098,15 @@ document.addEventListener('keydown', function(e) {
 initTheme();
 initLang();
 
-// ── Resolve slug from URL ──
+// ── Resolve slug from URL or sessionStorage ──
 function getSlugFromURL() {
+  // sessionStorage pass from 404.html (no ?p= flash)
+  var ss = sessionStorage.getItem('mc-article');
+  if (ss) { sessionStorage.removeItem('mc-article'); return ss; }
+  // Backward compat: ?p= or ?edition=
   const params = new URLSearchParams(window.location.search);
-  // 404.html fallback: ?p=brain-hallucination-engine
-  let p = params.get('p');
+  let p = params.get('p') || params.get('edition');
   if (p) return p;
-  // Backward compat: ?edition=2026-05-14
-  let ed = params.get('edition');
-  if (ed) return ed;
   // Path-based: /metacognition/brain-hallucination-engine
   let path = window.location.pathname.replace(/\/metacognition\//, '').replace(/\/$/, '');
   if (path && path !== 'index.html') return path;

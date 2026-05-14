@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><script>
-// SPA fallback: redirect /metacognition/anything → /metacognition/?p=/anything
-var path = sessionStorage.getItem('mc-redirect') || '';
-sessionStorage.removeItem('mc-redirect');
-if (!path) {
-  path = window.location.pathname.replace(/\/metacognition\//, '') || '';
-  sessionStorage.setItem('mc-redirect', path);
-}
-window.location.replace('/metacognition/' + (path ? '?p=' + encodeURIComponent(path) : ''));
+// SPA fallback: pass path via sessionStorage, redirect to clean root
+(function(){
+  var path = window.location.pathname.replace(/\/metacognition\//, '').replace(/\/$/, '');
+  if (path && path !== 'index.html' && path !== '404.html') {
+    sessionStorage.setItem('mc-article', path);
+    window.location.replace('/metacognition/');
+  }
+})();
 </script></head></html>
