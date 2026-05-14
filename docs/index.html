@@ -680,7 +680,7 @@
   <div class="hero-content">
     <div class="hero-badge" data-zh="破界期刊 · Horizon Journal" data-en="Horizon Journal · Break Your Bubble">破界期刊 · Horizon Journal</div>
     <h1>Metacognition</h1>
-    <p class="hero-subtitle" data-zh="破界期刊 — 每天一件认知之外的事。认知科学、哲学、投资、陌生领域，跳出思维舒适区。" data-en="Horizon Journal — One cognitive horizon, expanded daily. Science, philosophy, investing, unfamiliar domains.">破界期刊 — 每天一件认知之外的事。认知科学、哲学、投资、陌生领域，跳出思维舒适区。</p>
+    <p class="hero-subtitle" data-zh="破界期刊 — 认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。" data-en="Horizon Journal — Beyond cognition, across boundaries. Science, philosophy, investing, unfamiliar domains.">破界期刊 — 认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。</p>
     <p class="hero-quote" data-zh="“认知的边界，不在于知道多少，而在于敢于面对多少未知。”" data-en="“The boundary of cognition is not how much you know, but how much unknown you dare to face.”">“认知的边界，不在于知道多少，而在于敢于面对多少未知。”</p>
   </div>
 </section>
@@ -707,7 +707,7 @@
     <span data-zh="加载中" data-en="Loading">加载中</span><span class="loading-dot">.</span><span class="loading-dot">.</span><span class="loading-dot">.</span>
   </div>
   <div id="index-view" class="hidden">
-    <div class="section-header" data-zh="Editions · 期数" data-en="Editions">Editions · 期数</div>
+    <div class="section-header" data-zh="文章列表" data-en="Articles">文章列表</div>
     <div id="edition-list"></div>
   </div>
   <div id="article-view" class="hidden"></div>
@@ -922,7 +922,7 @@ function buildIndex(eds) {
     const tags = currentLang === 'en' && e.tags_en ? e.tags_en : e.tags;
     const hrefSlug = e.slug_en || e.slug;
     return `<a href="${BASE_PATH}${hrefSlug}" class="edition-card" onclick="event.preventDefault();loadEdition('${e.slug}')">
-      <div class="edition-number">#${String(e.num).padStart(3,'0')} · ${e.dateDisplay}</div>
+      <div class="edition-number">${e.dateDisplay}</div>
       <div class="edition-title">${title}</div>
       <div class="edition-tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
     </a>`;
@@ -949,7 +949,6 @@ async function loadEdition(slug) {
     const tags = meta.tags || [];
     const edMeta = editions.find(e => e.slug === slug);
     const dateDisplay = edMeta ? edMeta.dateDisplay : (meta.date || slug);
-    const numStr = meta.edition ? '#' + String(meta.edition).padStart(3, '0') : '';
 
     const tagsHTML = tags.length ? `<div class="edition-tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>` : '';
 
@@ -959,7 +958,6 @@ async function loadEdition(slug) {
       </a>
       <article class="article">
         <div class="article-header">
-          <div class="article-number">Edition ${numStr}</div>
           <h1>${title}</h1>
           <div class="article-date">${dateDisplay}</div>
           ${tagsHTML}
@@ -992,7 +990,11 @@ function loadComments(slug) {
   if (!container) return;
 
   // Show loading
-  container.innerHTML = '<div class="comments-loading"><span data-zh="加载评论中" data-en="Loading comments">加载评论中</span><span class="loading-dot">.</span><span class="loading-dot">.</span><span class="loading-dot">.</span></div>';
+  const loadingEl = document.createElement('div');
+  loadingEl.className = 'comments-loading';
+  loadingEl.innerHTML = '<span data-zh="加载评论中" data-en="Loading comments">加载评论中</span><span class="loading-dot">.</span><span class="loading-dot">.</span><span class="loading-dot">.</span>';
+  container.innerHTML = '';
+  container.appendChild(loadingEl);
   applyLang();
 
   // Create Utterances script
@@ -1001,18 +1003,21 @@ function loadComments(slug) {
   script.async = true;
   script.crossOrigin = 'anonymous';
   script.setAttribute('repo', 'barretlee/metacognition');
-  script.setAttribute('issue-term', slug);
+  script.setAttribute('issue-term', 'pathname');
   script.setAttribute('label', '💬 comment');
   script.setAttribute('theme', currentTheme === 'dark' ? 'photon-dark' : 'github-light');
   script.onload = () => {
-    // Utterances will replace the loading div with its own iframe
+    // Utterances creates its own iframe — remove only our loading element
+    if (loadingEl && loadingEl.parentNode === container) {
+      container.removeChild(loadingEl);
+    }
     commentsLoaded = true;
+    // Utterances iframe gets appended to the container, keep it
   };
   script.onerror = () => {
-    container.innerHTML = '<div class="comments-loading"><span data-zh="评论加载失败" data-en="Comments failed to load">评论加载失败</span></div>';
+    container.innerHTML = '<div class="comments-loading"><span data-zh="评论加载失败，请刷新后重试" data-en="Comments failed to load. Please refresh.">评论加载失败，请刷新后重试</span></div>';
     applyLang();
   };
-  container.innerHTML = '';
   container.appendChild(script);
 }
 

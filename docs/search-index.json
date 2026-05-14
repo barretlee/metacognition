@@ -1,1 +1,248 @@
-[{"slug": "2026-05-14", "slug_en": "brain-hallucination-engine", "date": "2026-05-14", "dateDisplay": "2026年5月14日", "title": "大脑是一台幻觉机器 — 预测加工理论如何颠覆认知", "title_en": "Your Brain Is a Hallucination Engine — How Predictive Processing Rewrites Cognition", "tags": ["认知科学", "预测加工", "斯多葛", "FU Money", "昼夜节律", "银发经济"], "tags_en": ["Cognitive Science", "Predictive Processing", "Stoicism", "FU Money", "Chronobiology", "Silver Economy"], "excerpt": "## 一、🧠 认知科学 — 意识并非被动接收现实", "excerpt_en": "## I. 🧠 Cognitive Science — Consciousness Is Not a Passive Receiver of Reality"}, {"slug": "2026-05-15", "slug_en": "invisible-systems-running-you", "date": "2026-05-15", "dateDisplay": "2026年5月15日", "title": "看不见的系统在运行你 — VO₂max、确认偏误、叙事传输与稀土博弈", "title_en": "Invisible Systems Running You — VO₂max, Confirmation Bias, Narrative Transportation & Rare Earths", "tags": ["运动科学", "VO₂max", "进化心理学", "确认偏误", "叙事传输", "叙事科学", "稀土", "地缘政治"], "tags_en": ["Exercise Science", "VO₂max", "Evolutionary Psychology", "Confirmation Bias", "Narrative Transportation", "Storytelling", "Rare Earths", "Geopolitics"], "excerpt": "## 一、🏃 运动科学 — 你的 VO₂max 正在预测你的寿命"}]
+[
+  {
+    "slug": "2026-05-15",
+    "slug_en": "invisible-systems-running-you",
+    "date": "2026-05-15",
+    "dateDisplay": "2026年5月15日",
+    "title": "看不见的系统在运行你 — VO₂max、确认偏误、叙事传输与稀土博弈",
+    "title_en": "Invisible Systems Running You — VO₂max, Confirmation Bias, Narrative Transportation & Rare Earths",
+    "tags": [
+      "运动科学",
+      "VO₂max",
+      "进化心理学",
+      "确认偏误",
+      "叙事传输",
+      "叙事科学",
+      "稀土",
+      "地缘政治"
+    ],
+    "tags_en": [
+      "Exercise Science",
+      "VO₂max",
+      "Evolutionary Psychology",
+      "Confirmation Bias",
+      "Narrative Transportation",
+      "Storytelling",
+      "Rare Earths",
+      "Geopolitics"
+    ],
+    "excerpt": "31|",
+    "excerpt_en": ""
+  },
+  {
+    "slug": "2026-05-14",
+    "slug_en": "brain-hallucination-engine",
+    "date": "2026-05-14",
+    "dateDisplay": "2026年5月14日",
+    "title": "大脑是一台幻觉机器 — 预测加工理论如何颠覆认知",
+    "title_en": "Your Brain Is a Hallucination Engine — How Predictive Processing Rewrites Cognition",
+    "tags": [
+      "认知科学",
+      "预测加工",
+      "斯多葛",
+      "FU Money",
+      "昼夜节律",
+      "银发经济"
+    ],
+    "tags_en": [
+      "Cognitive Science",
+      "Predictive Processing",
+      "Stoicism",
+      "FU Money",
+      "Chronobiology",
+      "Silver Economy"
+    ],
+    "excerpt": "30|",
+    "excerpt_en": "30|"
+  },
+  {
+    "slug": "2026-05-10",
+    "slug_en": "sleep-debt-compounds",
+    "date": "2026-05-10",
+    "dateDisplay": "2026年5月10日",
+    "title": "睡眠债务是复利计息的 — 为什么'少睡多干'是人生最差的交易",
+    "title_en": "Sleep Debt Compounds — Why 'Sleep Less, Do More' Is Life's Worst Trade",
+    "tags": [
+      "睡眠科学",
+      "认知",
+      "效率",
+      "健康",
+      "决策"
+    ],
+    "tags_en": [
+      "Sleep Science",
+      "Cognition",
+      "Productivity",
+      "Health",
+      "Decision Making"
+    ],
+    "excerpt": "6|",
+    "excerpt_en": "6|"
+  },
+  {
+    "slug": "2026-05-07",
+    "slug_en": "prompt-engineering-boundary",
+    "date": "2026-05-07",
+    "dateDisplay": "2026年5月7日",
+    "title": "Prompt Engineering 的哲学边界 — 当语言本身就是限制",
+    "title_en": "The Philosophical Boundary of Prompt Engineering — When Language Itself Is the Limit",
+    "tags": [
+      "AI",
+      "Prompt Engineering",
+      "语言哲学",
+      "维特根斯坦",
+      "认知"
+    ],
+    "tags_en": [
+      "AI",
+      "Prompt Engineering",
+      "Philosophy of Language",
+      "Wittgenstein",
+      "Cognition"
+    ],
+    "excerpt": "6|",
+    "excerpt_en": "6|"
+  },
+  {
+    "slug": "2026-05-03",
+    "slug_en": "attention-oil-21st-century",
+    "date": "2026-05-03",
+    "dateDisplay": "2026年5月3日",
+    "title": "注意力是 21 世纪的石油 — 而你每天都在免费开采自己",
+    "title_en": "Attention Is the Oil of the 21st Century — And You're Mining Yourself for Free Every Day",
+    "tags": [
+      "注意力经济",
+      "认知资源",
+      "数字健康",
+      "生产力",
+      "深度工作"
+    ],
+    "tags_en": [
+      "Attention Economy",
+      "Cognitive Resources",
+      "Digital Health",
+      "Productivity",
+      "Deep Work"
+    ],
+    "excerpt": "6|",
+    "excerpt_en": "6|"
+  },
+  {
+    "slug": "2026-04-29",
+    "slug_en": "optimization-fragility",
+    "date": "2026-04-29",
+    "dateDisplay": "2026年4月29日",
+    "title": "你越优化系统，系统越可能崩溃 — 复杂系统的反直觉法则",
+    "title_en": "The More You Optimize, the More It Collapses — Complex Systems' Counterintuitive Laws",
+    "tags": [
+      "复杂系统",
+      "系统工程",
+      "鲁棒性",
+      "反脆弱",
+      "风险"
+    ],
+    "tags_en": [
+      "Complex Systems",
+      "Systems Engineering",
+      "Robustness",
+      "Antifragility",
+      "Risk"
+    ],
+    "excerpt": "6|",
+    "excerpt_en": "6|"
+  },
+  {
+    "slug": "2026-04-26",
+    "slug_en": "peak-end-rule",
+    "date": "2026-04-26",
+    "dateDisplay": "2026年4月26日",
+    "title": "你的记忆在骗你 — 峰终定律如何扭曲所有体验评价",
+    "title_en": "Your Memory Is Lying to You — How the Peak-End Rule Distorts All Experience",
+    "tags": [
+      "行为经济学",
+      "峰终定律",
+      "用户体验",
+      "产品设计",
+      "认知偏差"
+    ],
+    "tags_en": [
+      "Behavioral Economics",
+      "Peak-End Rule",
+      "UX",
+      "Product Design",
+      "Cognitive Bias"
+    ],
+    "excerpt": "6|",
+    "excerpt_en": "6|"
+  },
+  {
+    "slug": "2026-04-22",
+    "slug_en": "cognitive-offloading",
+    "date": "2026-04-22",
+    "dateDisplay": "2026年4月22日",
+    "title": "记忆不再属于你 — 认知卸载如何重塑思维方式",
+    "title_en": "Memory No Longer Belongs to You — How Cognitive Offloading Reshapes Thought",
+    "tags": [
+      "认知科学",
+      "记忆",
+      "笔记系统",
+      "元认知"
+    ],
+    "tags_en": [
+      "Cognitive Science",
+      "Memory",
+      "Note-taking",
+      "Metacognition"
+    ],
+    "excerpt": "6|",
+    "excerpt_en": "30|"
+  },
+  {
+    "slug": "2026-04-19",
+    "slug_en": "delegation-paradox",
+    "date": "2026-04-19",
+    "dateDisplay": "2026年4月19日",
+    "title": "委托的悖论 — 当你训练分身时，分身也在反向训练你",
+    "title_en": "The Delegation Paradox — When You Train a Doppelgänger, It Trains You Back",
+    "tags": [
+      "AI Agent",
+      "自我认知",
+      "自动化",
+      "决策",
+      "认知偏差"
+    ],
+    "tags_en": [
+      "AI Agent",
+      "Self-Awareness",
+      "Automation",
+      "Decision Making",
+      "Cognitive Bias"
+    ],
+    "excerpt": "6|",
+    "excerpt_en": "31|"
+  },
+  {
+    "slug": "2026-04-16",
+    "slug_en": "software-becoming-organ",
+    "date": "2026-04-16",
+    "dateDisplay": "2026年4月16日",
+    "title": "软件正在退化为器官 — Agent 如何吃掉所有工具",
+    "title_en": "Software Is Becoming an Organ — How Agents Eat All Tools",
+    "tags": [
+      "AI Agent",
+      "工具哲学",
+      "范式转移",
+      "自动化",
+      "产品设计"
+    ],
+    "tags_en": [
+      "AI Agent",
+      "Tool Philosophy",
+      "Paradigm Shift",
+      "Automation",
+      "Product Design"
+    ],
+    "excerpt": "6|",
+    "excerpt_en": "6|"
+  }
+]
