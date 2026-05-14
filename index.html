@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>🔮 Metacognition — 破界日报</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-  :root {
+  /* ── Dark Theme (default) ── */
+  :root, [data-theme="dark"] {
     --bg: #0d0d0d;
     --surface: #1a1a1a;
     --surface-hover: #242424;
@@ -21,8 +22,27 @@
     --tag-text: #c9a96e;
     --gradient-1: #c9a96e;
     --gradient-2: #8b7355;
-    --font-serif: 'Noto Serif SC', Georgia, 'Times New Roman', serif;
-    --font-mono: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+    --toggle-bg: #1a1a1a;
+    --toggle-border: #2a2a2a;
+  }
+
+  /* ── Light Theme ── */
+  [data-theme="light"] {
+    --bg: #faf8f5;
+    --surface: #ffffff;
+    --surface-hover: #f5f2ed;
+    --text: #1a1815;
+    --text-secondary: #6b6358;
+    --text-muted: #9b9388;
+    --accent: #8b6914;
+    --accent-glow: rgba(139, 105, 20, 0.08);
+    --border: #e8e4dd;
+    --tag-bg: rgba(139, 105, 20, 0.08);
+    --tag-text: #8b6914;
+    --gradient-1: #8b6914;
+    --gradient-2: #5c4a1e;
+    --toggle-bg: #ffffff;
+    --toggle-border: #d4cfc6;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -32,9 +52,10 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: var(--font-serif);
+    font-family: 'Noto Serif SC', 'Noto Serif', Georgia, 'Times New Roman', serif;
     line-height: 1.8;
     min-height: 100vh;
+    transition: background 0.3s, color 0.3s;
   }
 
   /* ── Hero ── */
@@ -69,7 +90,7 @@
     padding: 6px 16px;
     border: 1px solid var(--border);
     border-radius: 100px;
-    font-family: var(--font-mono);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     font-size: 0.75rem;
     color: var(--accent);
     letter-spacing: 0.12em;
@@ -114,8 +135,14 @@
     z-index: 100;
     background: rgba(13, 13, 13, 0.85);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
     padding: 0 24px;
+    transition: background 0.3s;
+  }
+
+  [data-theme="light"] .nav {
+    background: rgba(250, 248, 245, 0.85);
   }
 
   .nav-inner {
@@ -125,25 +152,34 @@
     align-items: center;
     justify-content: space-between;
     height: 56px;
+    gap: 12px;
   }
 
   .nav-brand {
-    font-family: var(--font-mono);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     font-size: 0.85rem;
     color: var(--accent);
     letter-spacing: 0.08em;
     text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .nav-links {
     display: flex;
-    gap: 24px;
+    gap: 16px;
     list-style: none;
+    align-items: center;
   }
 
   .nav-links a {
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+    font-size: 0.75rem;
     color: var(--text-secondary);
     text-decoration: none;
     letter-spacing: 0.04em;
@@ -152,12 +188,37 @@
 
   .nav-links a:hover { color: var(--text); }
 
+  /* ── Toggle Buttons ── */
+  .toggle-btn {
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+    font-size: 0.7rem;
+    background: var(--toggle-bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--toggle-border);
+    border-radius: 6px;
+    padding: 4px 10px;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .toggle-btn:hover {
+    color: var(--text);
+    border-color: var(--accent);
+  }
+
+  .toggle-btn.active {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
   /* ── Main Layout ── */
   .main { max-width: 800px; margin: 0 auto; padding: 0 24px 80px; }
 
   /* ── Edition Cards ── */
   .section-header {
-    font-family: var(--font-mono);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     font-size: 0.7rem;
     color: var(--text-muted);
     letter-spacing: 0.15em;
@@ -183,11 +244,11 @@
     border-color: var(--accent);
     background: var(--surface-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
   }
 
   .edition-number {
-    font-family: var(--font-mono);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     font-size: 0.7rem;
     color: var(--accent);
     letter-spacing: 0.1em;
@@ -203,7 +264,7 @@
   }
 
   .edition-meta {
-    font-family: var(--font-mono);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     font-size: 0.75rem;
     color: var(--text-muted);
     display: flex;
@@ -219,7 +280,7 @@
   }
 
   .tag {
-    font-family: var(--font-mono);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     font-size: 0.68rem;
     padding: 3px 10px;
     background: var(--tag-bg);
@@ -242,7 +303,7 @@
   }
 
   .article-number {
-    font-family: var(--font-mono);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     font-size: 0.75rem;
     color: var(--accent);
     letter-spacing: 0.12em;
@@ -257,7 +318,7 @@
   }
 
   .article-date {
-    font-family: var(--font-mono);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     font-size: 0.8rem;
     color: var(--text-muted);
   }
@@ -302,7 +363,7 @@
   }
 
   .article-body code {
-    font-family: var(--font-mono);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     font-size: 0.85em;
     background: var(--surface);
     padding: 2px 6px;
@@ -351,7 +412,7 @@
     text-align: left;
     padding: 10px 14px;
     border-bottom: 2px solid var(--accent);
-    font-family: var(--font-mono);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     font-size: 0.75rem;
     letter-spacing: 0.05em;
     color: var(--accent);
@@ -375,7 +436,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-family: var(--font-mono);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     font-size: 0.8rem;
     color: var(--text-muted);
     text-decoration: none;
@@ -384,6 +445,30 @@
   }
 
   .back-link:hover { color: var(--text); }
+
+  /* ── Language separator in article ── */
+  .lang-section { display: none; }
+  .lang-section.active { display: block; }
+
+  .lang-divider {
+    margin: 60px 0;
+    border: none;
+    border-top: 2px dashed var(--border);
+    position: relative;
+    text-align: center;
+  }
+
+  .lang-divider::after {
+    content: attr(data-label);
+    position: relative;
+    top: -0.7em;
+    background: var(--bg);
+    padding: 0 16px;
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 0.12em;
+  }
 
   /* ── Footer ── */
   .footer {
@@ -395,7 +480,7 @@
   }
 
   .footer-inner {
-    font-family: var(--font-mono);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     font-size: 0.72rem;
     color: var(--text-muted);
   }
@@ -412,6 +497,9 @@
     .edition-card { padding: 20px 20px; }
     .article-header { padding: 40px 0 28px; }
     .article-body h2 { font-size: 1.2rem; }
+    .nav-inner { gap: 6px; }
+    .nav-links { gap: 10px; }
+    .toggle-btn { padding: 4px 7px; font-size: 0.65rem; }
   }
 
   /* ── Loading & Empty ── */
@@ -419,7 +507,7 @@
     text-align: center;
     padding: 80px 0;
     color: var(--text-muted);
-    font-family: var(--font-mono);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     font-size: 0.85rem;
   }
 
@@ -428,7 +516,7 @@
     animation: dotPulse 1.4s infinite;
   }
   .loading-dot:nth-child(2) { animation-delay: 0.2s; }
-  .loading-dot:nth-child(3) { animation-delay: 0.4s; }
+  .loading-dot:nth-child(4) { animation-delay: 0.4s; }
 
   @keyframes dotPulse {
     0%, 80%, 100% { opacity: 0.3; }
@@ -443,10 +531,10 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">Daily Edition · 每日 10:00</div>
+    <div class="hero-badge" data-zh="每日破界 · Daily Edition" data-en="Daily Edition · Break Your Bubble">每日破界 · Daily Edition</div>
     <h1>Metacognition</h1>
-    <p class="hero-subtitle">破界日报 — 每天一件你认知之外的事。认知科学、哲学、投资、陌生领域，带你跳出舒适区。</p>
-    <p class="hero-quote">"一个人的认知边界，不是他知道了多少，而是他敢于面对多少自己不知道的东西。"</p>
+    <p class="hero-subtitle" data-zh="破界日报 — 每天一件认知之外的事。认知科学、哲学、投资、陌生领域，跳出思维舒适区。" data-en="Daily cognitive horizon expansion. Science, philosophy, investing, unfamiliar domains — one eye-opening read at a time.">破界日报 — 每天一件认知之外的事。认知科学、哲学、投资、陌生领域，跳出思维舒适区。</p>
+    <p class="hero-quote" data-zh="“认知的边界，不在于知道多少，而在于敢于面对多少未知。”" data-en="“The boundary of cognition is not how much you know, but how much unknown you dare to face.”">“认知的边界，不在于知道多少，而在于敢于面对多少未知。”</p>
   </div>
 </section>
 
@@ -454,22 +542,26 @@
 <nav class="nav">
   <div class="nav-inner">
     <a href="/metacognition/" class="nav-brand">🔮 Metacognition</a>
-    <ul class="nav-links">
-      <li><a href="/metacognition/">目录</a></li>
-      <li><a href="https://github.com/barretlee/metacognition" target="_blank">GitHub</a></li>
-    </ul>
+    <div class="nav-group">
+      <ul class="nav-links">
+        <li><a href="/metacognition/" data-zh="目录" data-en="Index">目录</a></li>
+        <li><a href="https://github.com/barretlee/metacognition" target="_blank">GitHub</a></li>
+      </ul>
+      <button class="toggle-btn" id="lang-toggle" data-lang="zh" title="Switch language / 切换语言">中</button>
+      <button class="toggle-btn" id="theme-toggle" title="Toggle theme / 切换主题">☀</button>
+    </div>
   </div>
 </nav>
 
 <!-- Main -->
 <main class="main" id="main">
   <div class="loading" id="loading">
-    加载中<span class="loading-dot">.</span><span class="loading-dot">.</span><span class="loading-dot">.</span>
+    <span data-zh="加载中" data-en="Loading">加载中</span><span class="loading-dot">.</span><span class="loading-dot">.</span><span class="loading-dot">.</span>
   </div>
 
   <!-- Index View -->
   <div id="index-view" class="hidden">
-    <div class="section-header">Editions · 期数</div>
+    <div class="section-header" data-zh="Editions · 期数" data-en="Editions">Editions · 期数</div>
     <div id="edition-list"></div>
   </div>
 
@@ -480,181 +572,285 @@
 <!-- Footer -->
 <footer class="footer">
   <div class="footer-inner">
-    Built by <a href="https://github.com/barretlee">Barret Lee</a> · <a href="https://github.com/barretlee/metacognition">metacognition</a>
+    <span data-zh="由" data-en="Built by ">由</span> <a href="https://github.com/barretlee">Barret Lee</a> · <a href="https://github.com/barretlee/metacognition">metacognition</a>
   </div>
 </footer>
 
 <script>
-// ── Router ──
-const EDITIONS = [];
+// ── State ──
+const BASE_PATH = '/metacognition/';
+let currentLang = 'zh';
+let currentTheme = 'dark';
+let editions = [];
 
-function buildIndex(editions) {
-  const list = document.getElementById('edition-list');
-  list.innerHTML = editions
-    .sort((a, b) => b.date.localeCompare(a.date))
-    .map(e => `
-      <a href="/metacognition/?edition=${e.slug}" class="edition-card" onclick="event.preventDefault(); loadEdition('${e.slug}')">
-        <div class="edition-number">#${String(e.num).padStart(3, '0')} · ${e.dateDisplay}</div>
-        <div class="edition-title">${e.title}</div>
-        <div class="edition-tags">${e.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-      </a>
-    `).join('');
+// ── Cookie helpers ──
+function setCookie(name, value, days) {
+  const d = new Date();
+  d.setTime(d.getTime() + (days * 86400000));
+  document.cookie = name + '=' + value + ';path=/;expires=' + d.toUTCString() + ';SameSite=Lax';
 }
 
-function showLoading() {
-  document.getElementById('loading').classList.remove('hidden');
-  document.getElementById('index-view').classList.add('hidden');
-  document.getElementById('article-view').classList.add('hidden');
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  return match ? match[2] : null;
 }
 
-function showIndex() {
-  document.getElementById('loading').classList.add('hidden');
-  document.getElementById('index-view').classList.remove('hidden');
-  document.getElementById('article-view').classList.add('hidden');
-  window.history.pushState({}, '', '/metacognition/');
+// ── Init language from cookie or browser ──
+function initLang() {
+  const saved = getCookie('mc-lang');
+  if (saved === 'zh' || saved === 'en') {
+    currentLang = saved;
+  } else {
+    const browserLang = navigator.language || navigator.userLanguage || '';
+    currentLang = browserLang.startsWith('zh') ? 'zh' : 'en';
+  }
+  applyLang();
 }
 
-function markdownToHTML(md) {
-  let html = md;
+function toggleLang() {
+  currentLang = currentLang === 'zh' ? 'en' : 'zh';
+  setCookie('mc-lang', currentLang, 365);
+  applyLang();
+  if (document.getElementById('index-view').classList.contains('hidden') === false) {
+    buildIndex(editions);
+  }
+}
 
-  // Remove YAML frontmatter
-  html = html.replace(/^---[\s\S]*?---\n?/, '');
-
-  // Headings
-  html = html.replace(/^#### (.+)$/gm, '<h4>$1</h4>');
-  html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
-  html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
-  html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
-
-  // Horizontal rules
-  html = html.replace(/^---$/gm, '<hr>');
-
-  // Bold and italic
-  html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
-  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-  html = html.replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, '<em>$1</em>');
-
-  // Inline code
-  html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
-
-  // Code blocks
-  html = html.replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>');
-
-  // Links
-  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
-
-  // Images
-  html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" style="max-width:100%;border-radius:8px;margin:16px 0;">');
-
-  // Tables
-  html = html.replace(/^\|(.+)\|\n\|[-| :]+\|\n((?:\|.+\|\n?)*)/gm, (match, header, body) => {
-    const headers = header.split('|').map(h => h.trim()).filter(Boolean);
-    const rows = body.trim().split('\n').map(row =>
-      row.split('|').map(c => c.trim()).filter(Boolean)
-    );
-    const thead = `<tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr>`;
-    const tbody = rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('');
-    return `<table><thead>${thead}</thead><tbody>${tbody}</tbody></table>`;
+function applyLang() {
+  document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+  document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+    el.textContent = el.getAttribute('data-' + currentLang);
   });
 
-  // Unordered lists
-  html = html.replace(/^(?:- |\* )(.*)$/gm, '<li>$1</li>');
-  html = html.replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>');
+  // Lang toggle display
+  const btn = document.getElementById('lang-toggle');
+  btn.textContent = currentLang === 'zh' ? '中' : 'En';
+  btn.setAttribute('data-lang', currentLang);
 
-  // Blockquotes
-  html = html.replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>');
-  html = html.replace(/<\/blockquote>\n<blockquote>/g, '<br>');
+  // Show/hide language sections in article
+  document.querySelectorAll('.lang-section').forEach(sec => {
+    sec.classList.toggle('active', sec.getAttribute('data-lang') === currentLang);
+  });
+}
 
-  // Paragraphs — wrap remaining text lines
-  html = html.replace(/^(?!<[a-z]|$)(.+)$/gm, '<p>$1</p>');
+// ── Theme ──
+function initTheme() {
+  const saved = getCookie('mc-theme');
+  if (saved === 'light' || saved === 'dark') {
+    currentTheme = saved;
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    currentTheme = 'light';
+  }
+  applyTheme();
+  // Listen for system changes
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      if (!getCookie('mc-theme')) {
+        currentTheme = e.matches ? 'dark' : 'light';
+        applyTheme();
+      }
+    });
+  }
+}
 
-  // Clean up empty paragraphs
+function toggleTheme() {
+  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  setCookie('mc-theme', currentTheme, 365);
+  applyTheme();
+}
+
+function applyTheme() {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  const btn = document.getElementById('theme-toggle');
+  btn.textContent = currentTheme === 'dark' ? '☀' : '☾';
+}
+
+// ── Markdown parser (simple) ──
+function parseMarkdown(md) {
+  let html = md
+    // Headers
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    // Bold
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    // Italic
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    // Inline code
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    // Code blocks
+    .replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>')
+    // Links
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+    // Blockquotes
+    .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
+    // Horizontal rules
+    .replace(/^---$/gm, '<hr>')
+    // Unordered lists
+    .replace(/^- (.+)$/gm, '<li>$1</li>')
+    // Ordered lists
+    .replace(/^\d+\. (.+)$/gm, '<li>$1</li>')
+    // Wrap list items in ul
+    .replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>')
+    // Merge consecutive blockquotes
+    .replace(/<\/blockquote>\n<blockquote>/g, '<br>')
+    // Empty paragraphs
+    .replace(/\n\n/g, '</p><p>')
+    // Single newlines
+    .replace(/\n/g, '<br>');
+
+  // Wrap in paragraphs
+  html = '<p>' + html + '</p>';
+  // Clean up empty paragraphs and double-wrapped lists
+  html = html.replace(/<p><ul>/g, '<ul>').replace(/<\/ul><\/p>/g, '</ul>');
+  html = html.replace(/<p><blockquote>/g, '<blockquote>').replace(/<\/blockquote><\/p>/g, '</blockquote>');
+  html = html.replace(/<p><h([23])>/g, '<h$1>').replace(/<\/h([23])><\/p>/g, '</h$1>');
+  html = html.replace(/<p><hr><\/p>/g, '<hr>');
   html = html.replace(/<p>\s*<\/p>/g, '');
-
-  // Clean up nested <p> in blockquote
-  html = html.replace(/<blockquote><p>(.+?)<\/p><\/blockquote>/g, '<blockquote>$1</blockquote>');
 
   return html;
 }
 
+// ── Frontmatter parser ──
 function parseFrontmatter(md) {
-  const match = md.match(/^---\n([\s\S]*?)\n---/);
-  if (!match) return {};
-  const lines = match[1].split('\n');
-  const data = {};
-  for (const line of lines) {
-    const kv = line.match(/^(\w+):\s*(.+)$/);
-    if (kv) {
-      const key = kv[1];
-      let val = kv[2].trim();
-      if (val.startsWith('[') && val.endsWith(']')) {
-        val = val.slice(1, -1).split(',').map(s => s.trim());
+  const match = md.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  if (!match) return { meta: {}, body: md };
+  const meta = {};
+  match[1].split('\n').forEach(line => {
+    const m = line.match(/^(\w+):\s*(.+)$/);
+    if (m) {
+      const key = m[1];
+      let val = m[2].trim();
+      if (val.startsWith('"') && val.endsWith('"')) val = val.slice(1, -1);
+      if (key === 'tags' || key === 'tags_en') {
+        val = val.replace(/[\[\]]/g, '').split(',').map(s => s.trim().replace(/['"]/g, ''));
       }
-      data[key] = val;
+      meta[key] = val;
     }
-  }
-  return data;
+  });
+  return { meta, body: match[2].trim() };
+}
+
+// ── Router ──
+function buildIndex(eds) {
+  editions = eds;
+  const list = document.getElementById('edition-list');
+  list.innerHTML = eds
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .map(e => {
+      const title = currentLang === 'en' && e.title_en ? e.title_en : e.title;
+      const tags = currentLang === 'en' && e.tags_en ? e.tags_en : e.tags;
+      return `
+      <a href="/metacognition/?edition=${e.slug}" class="edition-card" onclick="event.preventDefault(); loadEdition('${e.slug}')">
+        <div class="edition-number">#${String(e.num).padStart(3, '0')} · ${e.dateDisplay}</div>
+        <div class="edition-title">${title}</div>
+        <div class="edition-tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+      </a>`;
+    }).join('');
+
+  document.getElementById('loading').classList.add('hidden');
+  document.getElementById('index-view').classList.remove('hidden');
+  document.getElementById('article-view').classList.add('hidden');
+  window.scrollTo(0, 0);
 }
 
 async function loadEdition(slug) {
-  showLoading();
-  try {
-    const resp = await fetch(`issues/${slug}.md`);
-    const md = await resp.text();
-    const fm = parseFrontmatter(md);
-    const html = markdownToHTML(md);
+  document.getElementById('loading').classList.remove('hidden');
+  document.getElementById('index-view').classList.add('hidden');
+  document.getElementById('article-view').classList.add('hidden');
 
-    const container = document.getElementById('article-view');
-    container.innerHTML = `
-      <div class="article">
-        <a href="/metacognition/" class="back-link" onclick="event.preventDefault(); showIndex()">← 返回目录</a>
+  try {
+    const resp = await fetch(BASE_PATH + 'issues/' + slug + '.md');
+    if (!resp.ok) throw new Error('Edition not found');
+    const md = await resp.text();
+    const { meta, body } = parseFrontmatter(md);
+
+    // Split Chinese and English sections
+    const parts = body.split(/^## EN\b/m);
+    const zhBody = parts[0].trim();
+    const enBody = parts.length > 1 ? parts[1].trim() : '';
+
+    const title = currentLang === 'en' && meta.title_en ? meta.title_en : (meta.title || slug);
+    const tags = currentLang === 'en' && meta.tags_en ? meta.tags_en : (meta.tags || []);
+    const edMeta = editions.find(e => e.slug === slug);
+    const dateDisplay = edMeta ? edMeta.dateDisplay : meta.date || slug;
+
+    const tagsHTML = tags.length ? `<div class="edition-tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>` : '';
+
+    let bodyHTML = '';
+    if (enBody) {
+      bodyHTML = `
+        <div class="lang-section active" data-lang="zh">${parseMarkdown(zhBody)}</div>
+        <hr class="lang-divider" data-label="ENGLISH EDITION">
+        <div class="lang-section" data-lang="en">${parseMarkdown(enBody)}</div>`;
+    } else {
+      bodyHTML = parseMarkdown(zhBody);
+    }
+
+    const numStr = meta.edition ? '#' + String(meta.edition).padStart(3, '0') : '';
+
+    document.getElementById('article-view').innerHTML = `
+      <a href="/metacognition/" class="back-link" onclick="event.preventDefault(); buildIndex(editions)">
+        <span data-zh="← 返回目录" data-en="← Back to Index">← 返回目录</span>
+      </a>
+      <article class="article">
         <div class="article-header">
-          <div class="article-number">Edition #${String(fm.edition || '—').padStart(3, '0')}</div>
-          <h1>${fm.title || 'Untitled'}</h1>
-          <div class="article-date">${fm.date || ''}</div>
+          <div class="article-number">Edition ${numStr}</div>
+          <h1>${title}</h1>
+          <div class="article-date">${dateDisplay}</div>
+          ${tagsHTML}
         </div>
-        <div class="article-body">${html}</div>
-        <div style="margin-top:60px;padding-top:40px;border-top:1px solid var(--border);">
-          <a href="/metacognition/" class="back-link" onclick="event.preventDefault(); showIndex()">← 返回目录</a>
-        </div>
-      </div>
-    `;
+        <div class="article-body">${bodyHTML}</div>
+      </article>`;
 
     document.getElementById('loading').classList.add('hidden');
-    document.getElementById('index-view').classList.add('hidden');
-    container.classList.remove('hidden');
-    window.history.pushState({}, '', `/metacognition/?edition=${slug}`);
+    document.getElementById('article-view').classList.remove('hidden');
+    applyLang(); // Re-apply after dynamic content
     window.scrollTo(0, 0);
-  } catch (e) {
-    console.error('Failed to load edition:', e);
-    showIndex();
+
+    // Update URL
+    if (history.pushState) {
+      history.pushState(null, '', BASE_PATH + '?edition=' + slug);
+    }
+  } catch (err) {
+    document.getElementById('loading').innerHTML = '<span data-zh="加载失败，请稍后再试" data-en="Failed to load, please try again">加载失败，请稍后再试</span>';
+    applyLang();
   }
 }
 
 // ── Init ──
-async function init() {
-  try {
-    // Fetch editions index
-    const resp = await fetch('editions.json');
-    const data = await resp.json();
-    data.editions.forEach(e => EDITIONS.push(e));
-    buildIndex(EDITIONS);
+document.getElementById('lang-toggle').addEventListener('click', toggleLang);
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 
-    // Check if URL has edition param
+initTheme();
+initLang();
+
+// Load editions
+fetch(BASE_PATH + 'editions.json')
+  .then(r => r.json())
+  .then(data => {
+    buildIndex(data.editions);
+    // Check URL for direct edition link
     const params = new URLSearchParams(window.location.search);
     const editionSlug = params.get('edition');
     if (editionSlug) {
       loadEdition(editionSlug);
-    } else {
-      showIndex();
     }
-  } catch (e) {
-    console.error('Failed to load editions:', e);
-    document.getElementById('loading').innerHTML = '加载失败，请刷新页面重试。';
-  }
-}
+  })
+  .catch(() => {
+    document.getElementById('loading').innerHTML = '<span data-zh="加载失败，请稍后再试" data-en="Failed to load, please try again">加载失败，请稍后再试</span>';
+    applyLang();
+  });
 
-init();
+// Handle browser back/forward
+window.addEventListener('popstate', () => {
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('edition');
+  if (slug) {
+    loadEdition(slug);
+  } else {
+    buildIndex(editions);
+  }
+});
 </script>
 </body>
 </html>
