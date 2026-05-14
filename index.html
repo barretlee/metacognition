@@ -16,7 +16,7 @@
     --text-secondary: #8a857c;
     --text-muted: #5c5852;
     --accent: #c9a96e;
-    --accent-glow: rgba(201, 169, 110, 0.15);
+    --accent-glow: rgba(201, 169, 110, 0.12);
     --border: #2a2a2a;
     --tag-bg: rgba(201, 169, 110, 0.1);
     --tag-text: #c9a96e;
@@ -26,7 +26,6 @@
     --toggle-border: #2a2a2a;
   }
 
-  /* ── Light Theme ── */
   [data-theme="light"] {
     --bg: #faf8f5;
     --surface: #ffffff;
@@ -35,7 +34,7 @@
     --text-secondary: #6b6358;
     --text-muted: #9b9388;
     --accent: #8b6914;
-    --accent-glow: rgba(139, 105, 20, 0.08);
+    --accent-glow: rgba(139, 105, 20, 0.06);
     --border: #e8e4dd;
     --tag-bg: rgba(139, 105, 20, 0.08);
     --tag-text: #8b6914;
@@ -61,7 +60,7 @@
   /* ── Hero ── */
   .hero {
     position: relative;
-    padding: 120px 24px 80px;
+    padding: 100px 24px 64px;
     text-align: center;
     overflow: hidden;
   }
@@ -74,7 +73,7 @@
     width: 200%;
     height: 200%;
     background: radial-gradient(ellipse at 50% 30%, var(--accent-glow) 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 70%, rgba(139, 115, 85, 0.08) 0%, transparent 50%);
+                radial-gradient(ellipse at 80% 70%, rgba(139, 115, 85, 0.06) 0%, transparent 50%);
     animation: heroGlow 8s ease-in-out infinite alternate;
   }
 
@@ -83,28 +82,28 @@
     100% { transform: scale(1.1) translate(-2%, -2%); opacity: 1; }
   }
 
-  .hero-content { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
+  .hero-content { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
 
   .hero-badge {
     display: inline-block;
-    padding: 6px 16px;
+    padding: 5px 14px;
     border: 1px solid var(--border);
     border-radius: 100px;
     font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--accent);
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     backdrop-filter: blur(12px);
   }
 
   .hero h1 {
-    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-size: clamp(2rem, 5vw, 3.4rem);
     font-weight: 700;
     letter-spacing: -0.02em;
-    line-height: 1.25;
-    margin-bottom: 20px;
+    line-height: 1.2;
+    margin-bottom: 18px;
     background: linear-gradient(135deg, var(--text) 0%, var(--text-secondary) 60%, var(--gradient-1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -112,19 +111,19 @@
   }
 
   .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--text-secondary);
-    max-width: 500px;
-    margin: 0 auto 36px;
+    max-width: 480px;
+    margin: 0 auto 32px;
   }
 
   .hero-quote {
     font-style: italic;
     color: var(--text-muted);
-    font-size: 0.95rem;
-    padding-top: 24px;
+    font-size: 0.9rem;
+    padding-top: 20px;
     border-top: 1px solid var(--border);
-    max-width: 440px;
+    max-width: 420px;
     margin: 0 auto;
   }
 
@@ -133,16 +132,15 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(13, 13, 13, 0.85);
+    background: rgba(13, 13, 13, 0.88);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
     padding: 0 24px;
-    transition: background 0.3s;
   }
 
   [data-theme="light"] .nav {
-    background: rgba(250, 248, 245, 0.85);
+    background: rgba(250, 248, 245, 0.88);
   }
 
   .nav-inner {
@@ -151,13 +149,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 56px;
-    gap: 12px;
+    height: 52px;
+    gap: 10px;
   }
 
   .nav-brand {
     font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--accent);
     letter-spacing: 0.08em;
     text-decoration: none;
@@ -167,19 +165,19 @@
   .nav-group {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
   }
 
   .nav-links {
     display: flex;
-    gap: 16px;
+    gap: 14px;
     list-style: none;
     align-items: center;
   }
 
   .nav-links a {
     font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: var(--text-secondary);
     text-decoration: none;
     letter-spacing: 0.04em;
@@ -191,7 +189,7 @@
   /* ── Toggle Buttons ── */
   .toggle-btn {
     font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     background: var(--toggle-bg);
     color: var(--text-secondary);
     border: 1px solid var(--toggle-border);
@@ -208,23 +206,18 @@
     border-color: var(--accent);
   }
 
-  .toggle-btn.active {
-    color: var(--accent);
-    border-color: var(--accent);
-  }
-
   /* ── Main Layout ── */
-  .main { max-width: 800px; margin: 0 auto; padding: 0 24px 80px; }
+  .main { max-width: 760px; margin: 0 auto; padding: 0 24px 72px; }
 
   /* ── Edition Cards ── */
   .section-header {
     font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     color: var(--text-muted);
-    letter-spacing: 0.15em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    margin: 60px 0 20px;
-    padding-bottom: 12px;
+    margin: 48px 0 18px;
+    padding-bottom: 10px;
     border-bottom: 1px solid var(--border);
   }
 
@@ -232,9 +225,9 @@
     display: block;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 28px 32px;
-    margin-bottom: 12px;
+    border-radius: 10px;
+    padding: 22px 28px;
+    margin-bottom: 10px;
     text-decoration: none;
     transition: all 0.25s ease;
     cursor: pointer;
@@ -243,103 +236,94 @@
   .edition-card:hover {
     border-color: var(--accent);
     background: var(--surface-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
   }
 
   .edition-number {
     font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     color: var(--accent);
     letter-spacing: 0.1em;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .edition-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--text);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     line-height: 1.4;
-  }
-
-  .edition-meta {
-    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    display: flex;
-    gap: 16px;
-    align-items: center;
   }
 
   .edition-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 14px;
+    gap: 5px;
+    margin-top: 12px;
   }
 
   .tag {
     font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.68rem;
-    padding: 3px 10px;
+    font-size: 0.65rem;
+    padding: 3px 9px;
     background: var(--tag-bg);
     color: var(--tag-text);
     border-radius: 100px;
   }
 
   /* ── Article View ── */
-  .article { animation: fadeIn 0.5s ease; }
+  .article { animation: fadeIn 0.4s ease; }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(16px); }
+    from { opacity: 0; transform: translateY(12px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
   .article-header {
-    padding: 60px 0 40px;
+    padding: 48px 0 28px;
     border-bottom: 1px solid var(--border);
-    margin-bottom: 48px;
+    margin-bottom: 36px;
   }
 
   .article-number {
     font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: var(--accent);
-    letter-spacing: 0.12em;
-    margin-bottom: 12px;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
   }
 
   .article-header h1 {
-    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
     font-weight: 700;
     line-height: 1.3;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .article-date {
     font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
   }
 
   .article-body h2 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    margin: 48px 0 16px;
+    margin: 36px 0 12px;
     color: var(--text);
-    scroll-margin-top: 80px;
+    scroll-margin-top: 72px;
   }
 
   .article-body h3 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 600;
-    margin: 32px 0 12px;
+    margin: 24px 0 10px;
     color: var(--accent);
   }
 
   .article-body p {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     color: var(--text-secondary);
   }
 
@@ -350,23 +334,23 @@
 
   .article-body blockquote {
     border-left: 3px solid var(--accent);
-    padding: 12px 20px;
-    margin: 24px 0;
+    padding: 10px 18px;
+    margin: 18px 0;
     background: var(--surface);
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 6px 6px 0;
     color: var(--text-secondary);
     font-style: italic;
   }
 
-  .article-body blockquote strong {
-    color: var(--accent);
-  }
+  .article-body blockquote p { margin-bottom: 0; }
+
+  .article-body blockquote strong { color: var(--accent); }
 
   .article-body code {
     font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     font-size: 0.85em;
     background: var(--surface);
-    padding: 2px 6px;
+    padding: 2px 5px;
     border-radius: 4px;
     color: var(--accent);
   }
@@ -375,54 +359,38 @@
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 20px 24px;
-    margin: 20px 0;
+    padding: 16px 20px;
+    margin: 16px 0;
     overflow-x: auto;
+    font-size: 0.85rem;
+    line-height: 1.65;
   }
 
   .article-body pre code {
     background: none;
     padding: 0;
     color: var(--text);
-    font-size: 0.85rem;
-    line-height: 1.7;
+    font-size: inherit;
+    line-height: inherit;
   }
 
   .article-body hr {
     border: none;
     border-top: 1px solid var(--border);
-    margin: 40px 0;
+    margin: 28px 0;
   }
 
   .article-body ul, .article-body ol {
-    margin: 12px 0 20px 24px;
+    margin: 10px 0 14px 20px;
     color: var(--text-secondary);
   }
 
-  .article-body li { margin-bottom: 8px; }
-
-  .article-body table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 24px 0;
-    font-size: 0.9rem;
+  .article-body li {
+    margin-bottom: 4px;
+    line-height: 1.7;
   }
 
-  .article-body th {
-    text-align: left;
-    padding: 10px 14px;
-    border-bottom: 2px solid var(--accent);
-    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
-    color: var(--accent);
-  }
-
-  .article-body td {
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--border);
-    color: var(--text-secondary);
-  }
+  .article-body li p { margin-bottom: 0; }
 
   .article-body a {
     color: var(--accent);
@@ -432,83 +400,89 @@
 
   .article-body a:hover { border-bottom-style: solid; }
 
+  /* ── Tables ── */
+  .article-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.88rem;
+  }
+
+  .article-body th {
+    text-align: left;
+    padding: 9px 12px;
+    border-bottom: 2px solid var(--accent);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .article-body td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+
+  .article-body tr:last-child td { border-bottom: none; }
+
   .back-link {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
     text-decoration: none;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     transition: color 0.2s;
   }
 
   .back-link:hover { color: var(--text); }
 
-  /* ── Language separator in article ── */
-  .lang-section { display: none; }
-  .lang-section.active { display: block; }
-
-  .lang-divider {
-    margin: 60px 0;
-    border: none;
-    border-top: 2px dashed var(--border);
-    position: relative;
-    text-align: center;
-  }
-
-  .lang-divider::after {
-    content: attr(data-label);
-    position: relative;
-    top: -0.7em;
-    background: var(--bg);
-    padding: 0 16px;
-    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    letter-spacing: 0.12em;
-  }
-
   /* ── Footer ── */
   .footer {
     max-width: 800px;
     margin: 0 auto;
-    padding: 60px 24px 40px;
+    padding: 48px 24px 36px;
     border-top: 1px solid var(--border);
     text-align: center;
   }
 
   .footer-inner {
     font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     color: var(--text-muted);
   }
 
-  .footer-inner a {
-    color: var(--accent);
-    text-decoration: none;
-  }
+  .footer-inner a { color: var(--accent); text-decoration: none; }
 
   /* ── Responsive ── */
   @media (max-width: 640px) {
-    .hero { padding: 80px 20px 60px; }
-    .main { padding: 0 16px 60px; }
-    .edition-card { padding: 20px 20px; }
-    .article-header { padding: 40px 0 28px; }
-    .article-body h2 { font-size: 1.2rem; }
-    .nav-inner { gap: 6px; }
-    .nav-links { gap: 10px; }
-    .toggle-btn { padding: 4px 7px; font-size: 0.65rem; }
+    .hero { padding: 64px 20px 48px; }
+    .hero h1 { font-size: 1.8rem; }
+    .hero-subtitle { font-size: 0.95rem; }
+    .main { padding: 0 16px 48px; }
+    .edition-card { padding: 18px 18px; }
+    .edition-title { font-size: 1.1rem; }
+    .article-header { padding: 32px 0 20px; }
+    .article-body h2 { font-size: 1.15rem; margin-top: 28px; }
+    .article-body pre { padding: 12px 14px; font-size: 0.8rem; }
+    .article-body table { font-size: 0.8rem; }
+    .article-body th, .article-body td { padding: 6px 8px; }
+    .nav-inner { gap: 4px; }
+    .nav-links { gap: 8px; }
+    .toggle-btn { padding: 3px 7px; font-size: 0.62rem; }
+    .section-header { margin-top: 36px; }
   }
 
-  /* ── Loading & Empty ── */
   .loading {
     text-align: center;
-    padding: 80px 0;
+    padding: 72px 0;
     color: var(--text-muted);
     font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
   }
 
   .loading-dot {
@@ -528,7 +502,6 @@
 </head>
 <body>
 
-<!-- Hero -->
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge" data-zh="每日破界 · Daily Edition" data-en="Daily Edition · Break Your Bubble">每日破界 · Daily Edition</div>
@@ -538,7 +511,6 @@
   </div>
 </section>
 
-<!-- Navigation -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="/metacognition/" class="nav-brand">🔮 Metacognition</a>
@@ -547,29 +519,23 @@
         <li><a href="/metacognition/" data-zh="目录" data-en="Index">目录</a></li>
         <li><a href="https://github.com/barretlee/metacognition" target="_blank">GitHub</a></li>
       </ul>
-      <button class="toggle-btn" id="lang-toggle" data-lang="zh" title="Switch language / 切换语言">中</button>
-      <button class="toggle-btn" id="theme-toggle" title="Toggle theme / 切换主题">☀</button>
+      <button class="toggle-btn" id="lang-toggle" title="Switch language / 切换语言" style="width:32px;text-align:center;">中</button>
+      <button class="toggle-btn" id="theme-toggle" title="Toggle theme / 切换主题" style="width:32px;text-align:center;">🌙</button>
     </div>
   </div>
 </nav>
 
-<!-- Main -->
 <main class="main" id="main">
   <div class="loading" id="loading">
     <span data-zh="加载中" data-en="Loading">加载中</span><span class="loading-dot">.</span><span class="loading-dot">.</span><span class="loading-dot">.</span>
   </div>
-
-  <!-- Index View -->
   <div id="index-view" class="hidden">
     <div class="section-header" data-zh="Editions · 期数" data-en="Editions">Editions · 期数</div>
     <div id="edition-list"></div>
   </div>
-
-  <!-- Article View -->
   <div id="article-view" class="hidden"></div>
 </main>
 
-<!-- Footer -->
 <footer class="footer">
   <div class="footer-inner">
     <span data-zh="由" data-en="Built by ">由</span> <a href="https://github.com/barretlee">Barret Lee</a> · <a href="https://github.com/barretlee/metacognition">metacognition</a>
@@ -577,7 +543,6 @@
 </footer>
 
 <script>
-// ── State ──
 const BASE_PATH = '/metacognition/';
 let currentLang = 'zh';
 let currentTheme = 'dark';
@@ -589,125 +554,144 @@ function setCookie(name, value, days) {
   d.setTime(d.getTime() + (days * 86400000));
   document.cookie = name + '=' + value + ';path=/;expires=' + d.toUTCString() + ';SameSite=Lax';
 }
-
 function getCookie(name) {
   const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
   return match ? match[2] : null;
 }
 
-// ── Init language from cookie or browser ──
+// ── Lang ──
 function initLang() {
   const saved = getCookie('mc-lang');
-  if (saved === 'zh' || saved === 'en') {
-    currentLang = saved;
-  } else {
-    const browserLang = navigator.language || navigator.userLanguage || '';
-    currentLang = browserLang.startsWith('zh') ? 'zh' : 'en';
-  }
+  if (saved === 'zh' || saved === 'en') { currentLang = saved; }
+  else { currentLang = (navigator.language || '').startsWith('zh') ? 'zh' : 'en'; }
   applyLang();
 }
-
 function toggleLang() {
   currentLang = currentLang === 'zh' ? 'en' : 'zh';
   setCookie('mc-lang', currentLang, 365);
   applyLang();
-  if (document.getElementById('index-view').classList.contains('hidden') === false) {
+  // Reload article if viewing one
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('edition');
+  if (slug && !document.getElementById('index-view').classList.contains('hidden') === false) {
+    // We're on article view — check
+  }
+  if (!document.getElementById('index-view').classList.contains('hidden')) {
     buildIndex(editions);
+  } else if (slug) {
+    loadEdition(slug);
   }
 }
-
 function applyLang() {
   document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
   document.querySelectorAll('[data-zh][data-en]').forEach(el => {
     el.textContent = el.getAttribute('data-' + currentLang);
   });
-
-  // Lang toggle display
-  const btn = document.getElementById('lang-toggle');
-  btn.textContent = currentLang === 'zh' ? '中' : 'En';
-  btn.setAttribute('data-lang', currentLang);
-
-  // Show/hide language sections in article
-  document.querySelectorAll('.lang-section').forEach(sec => {
-    sec.classList.toggle('active', sec.getAttribute('data-lang') === currentLang);
-  });
+  document.getElementById('lang-toggle').textContent = currentLang === 'zh' ? '中' : 'En';
 }
 
 // ── Theme ──
 function initTheme() {
   const saved = getCookie('mc-theme');
-  if (saved === 'light' || saved === 'dark') {
-    currentTheme = saved;
-  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    currentTheme = 'light';
-  }
+  if (saved === 'light' || saved === 'dark') { currentTheme = saved; }
+  else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) { currentTheme = 'light'; }
   applyTheme();
-  // Listen for system changes
   if (window.matchMedia) {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-      if (!getCookie('mc-theme')) {
-        currentTheme = e.matches ? 'dark' : 'light';
-        applyTheme();
-      }
+      if (!getCookie('mc-theme')) { currentTheme = e.matches ? 'dark' : 'light'; applyTheme(); }
     });
   }
 }
-
 function toggleTheme() {
   currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
   setCookie('mc-theme', currentTheme, 365);
   applyTheme();
 }
-
 function applyTheme() {
   document.documentElement.setAttribute('data-theme', currentTheme);
-  const btn = document.getElementById('theme-toggle');
-  btn.textContent = currentTheme === 'dark' ? '☀' : '☾';
+  document.getElementById('theme-toggle').textContent = currentTheme === 'dark' ? '🌙' : '☀️';
 }
 
-// ── Markdown parser (simple) ──
+// ── Markdown Parser ──
 function parseMarkdown(md) {
-  let html = md
-    // Headers
-    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-    // Bold
-    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    // Italic
-    .replace(/\*(.+?)\*/g, '<em>$1</em>')
-    // Inline code
-    .replace(/`([^`]+)`/g, '<code>$1</code>')
-    // Code blocks
-    .replace(/```(\w*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>')
-    // Links
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
-    // Blockquotes
-    .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
-    // Horizontal rules
-    .replace(/^---$/gm, '<hr>')
-    // Unordered lists
-    .replace(/^- (.+)$/gm, '<li>$1</li>')
-    // Ordered lists
-    .replace(/^\d+\. (.+)$/gm, '<li>$1</li>')
-    // Wrap list items in ul
-    .replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>')
-    // Merge consecutive blockquotes
-    .replace(/<\/blockquote>\n<blockquote>/g, '<br>')
-    // Empty paragraphs
-    .replace(/\n\n/g, '</p><p>')
-    // Single newlines
-    .replace(/\n/g, '<br>');
+  const placeholders = [];
+  const stash = (html) => { placeholders.push(html); return '\x00' + (placeholders.length - 1) + '\x00'; };
 
-  // Wrap in paragraphs
-  html = '<p>' + html + '</p>';
-  // Clean up empty paragraphs and double-wrapped lists
-  html = html.replace(/<p><ul>/g, '<ul>').replace(/<\/ul><\/p>/g, '</ul>');
-  html = html.replace(/<p><blockquote>/g, '<blockquote>').replace(/<\/blockquote><\/p>/g, '</blockquote>');
-  html = html.replace(/<p><h([23])>/g, '<h$1>').replace(/<\/h([23])><\/p>/g, '</h$1>');
-  html = html.replace(/<p><hr><\/p>/g, '<hr>');
-  html = html.replace(/<p>\s*<\/p>/g, '');
+  // 1. Extract fenced code blocks
+  md = md.replace(/```(\w*)\n([\s\S]*?)```/g, (_, lang, code) => {
+    const cls = lang ? ' class="language-' + lang + '"' : '';
+    return stash('<pre' + cls + '><code>' + escapeHTML(code.trimEnd()) + '</code></pre>');
+  });
 
-  return html;
+  // 2. Extract inline code
+  md = md.replace(/`([^`]+)`/g, (_, code) => stash('<code>' + escapeHTML(code) + '</code>'));
+
+  // 3. Parse tables (must be before paragraph wrapping)
+  md = md.replace(/(^\|.+\|\n\|[-| :]+\|\n((?:\|.+\|\n?)+))/gm, (match) => {
+    const lines = match.trim().split('\n');
+    if (lines.length < 2) return match;
+    let html = '<table>';
+    // Header
+    html += '<thead><tr>' + lines[0].split('|').filter(c => c.trim()).map(c => '<th>' + c.trim() + '</th>').join('') + '</tr></thead>';
+    // Body (skip separator line)
+    html += '<tbody>';
+    for (let i = 2; i < lines.length; i++) {
+      html += '<tr>' + lines[i].split('|').filter(c => c.trim()).map(c => '<td>' + c.trim() + '</td>').join('') + '</tr>';
+    }
+    html += '</tbody></table>';
+    return stash(html);
+  });
+
+  // 4. Headers
+  md = md.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+  md = md.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+
+  // 5. Horizontal rules
+  md = md.replace(/^---$/gm, stash('<hr>'));
+
+  // 6. Blockquotes
+  md = md.replace(/^> (.+)$/gm, '<blockquote><p>$1</p></blockquote>');
+  // Merge consecutive blockquotes
+  md = md.replace(/<\/blockquote>\n<blockquote>/g, '<br>');
+
+  // 7. Bold and italic (after headers so # aren't caught)
+  md = md.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  md = md.replace(/\*(.+?)\*/g, '<em>$1</em>');
+
+  // 8. Links
+  md = md.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+
+  // 9. Unordered lists — group consecutive `- ` lines
+  md = md.replace(/((?:^- .+\n?)+)/gm, (block) => {
+    const items = block.trim().split('\n').map(l => '<li>' + l.replace(/^- /, '') + '</li>').join('');
+    return stash('<ul>' + items + '</ul>');
+  });
+
+  // 10. Ordered lists — group consecutive `N. ` lines
+  md = md.replace(/((?:^\d+\. .+\n?)+)/gm, (block) => {
+    const items = block.trim().split('\n').map(l => '<li>' + l.replace(/^\d+\. /, '') + '</li>').join('');
+    return stash('<ol>' + items + '</ol>');
+  });
+
+  // 11. Wrap remaining text in paragraphs
+  md = md.replace(/\n\n+/g, '</p><p>');
+  md = md.replace(/\n/g, '<br>');
+  md = '<p>' + md + '</p>';
+
+  // 12. Clean up empty paragraphs and fix nesting
+  md = md.replace(/<p>\s*<\/p>/g, '');
+  md = md.replace(/<p><(h[23]|ul|ol|blockquote|table|pre|hr)/g, '<$1');
+  md = md.replace(/(\/h[23]>|\/ul>|\/ol>|\/blockquote>|\/table>|\/pre>|\/hr>)<\/p>/g, '$1');
+  md = md.replace(/<br><\/(h[23]|ul|ol|blockquote|table)>/g, '</$1>');
+
+  // 13. Restore placeholders
+  md = md.replace(/\x00(\d+)\x00/g, (_, i) => placeholders[parseInt(i)]);
+
+  return md;
+}
+
+function escapeHTML(str) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
 // ── Frontmatter parser ──
@@ -718,78 +702,58 @@ function parseFrontmatter(md) {
   match[1].split('\n').forEach(line => {
     const m = line.match(/^(\w+):\s*(.+)$/);
     if (m) {
-      const key = m[1];
       let val = m[2].trim();
       if (val.startsWith('"') && val.endsWith('"')) val = val.slice(1, -1);
-      if (key === 'tags' || key === 'tags_en') {
+      if (m[1] === 'tags') {
         val = val.replace(/[\[\]]/g, '').split(',').map(s => s.trim().replace(/['"]/g, ''));
       }
-      meta[key] = val;
+      meta[m[1]] = val;
     }
   });
   return { meta, body: match[2].trim() };
 }
 
-// ── Router ──
+// ── Build index ──
 function buildIndex(eds) {
   editions = eds;
   const list = document.getElementById('edition-list');
-  list.innerHTML = eds
-    .sort((a, b) => b.date.localeCompare(a.date))
-    .map(e => {
-      const title = currentLang === 'en' && e.title_en ? e.title_en : e.title;
-      const tags = currentLang === 'en' && e.tags_en ? e.tags_en : e.tags;
-      return `
-      <a href="/metacognition/?edition=${e.slug}" class="edition-card" onclick="event.preventDefault(); loadEdition('${e.slug}')">
-        <div class="edition-number">#${String(e.num).padStart(3, '0')} · ${e.dateDisplay}</div>
-        <div class="edition-title">${title}</div>
-        <div class="edition-tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-      </a>`;
-    }).join('');
-
+  list.innerHTML = eds.sort((a, b) => b.date.localeCompare(a.date)).map(e => {
+    const title = currentLang === 'en' && e.title_en ? e.title_en : e.title;
+    const tags = currentLang === 'en' && e.tags_en ? e.tags_en : e.tags;
+    return `<a href="${BASE_PATH}?edition=${e.slug}" class="edition-card" onclick="event.preventDefault();loadEdition('${e.slug}')">
+      <div class="edition-number">#${String(e.num).padStart(3,'0')} · ${e.dateDisplay}</div>
+      <div class="edition-title">${title}</div>
+      <div class="edition-tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+    </a>`;
+  }).join('');
   document.getElementById('loading').classList.add('hidden');
   document.getElementById('index-view').classList.remove('hidden');
   document.getElementById('article-view').classList.add('hidden');
   window.scrollTo(0, 0);
 }
 
+// ── Load edition ──
 async function loadEdition(slug) {
   document.getElementById('loading').classList.remove('hidden');
   document.getElementById('index-view').classList.add('hidden');
   document.getElementById('article-view').classList.add('hidden');
 
+  const suffix = currentLang === 'en' ? '.en.md' : '.md';
   try {
-    const resp = await fetch(BASE_PATH + 'issues/' + slug + '.md');
+    const resp = await fetch(BASE_PATH + 'issues/' + slug + suffix);
     if (!resp.ok) throw new Error('Edition not found');
     const md = await resp.text();
     const { meta, body } = parseFrontmatter(md);
-
-    // Split Chinese and English sections
-    const parts = body.split(/^## EN\b/m);
-    const zhBody = parts[0].trim();
-    const enBody = parts.length > 1 ? parts[1].trim() : '';
-
-    const title = currentLang === 'en' && meta.title_en ? meta.title_en : (meta.title || slug);
-    const tags = currentLang === 'en' && meta.tags_en ? meta.tags_en : (meta.tags || []);
+    const title = meta.title || slug;
+    const tags = meta.tags || [];
     const edMeta = editions.find(e => e.slug === slug);
-    const dateDisplay = edMeta ? edMeta.dateDisplay : meta.date || slug;
+    const dateDisplay = edMeta ? edMeta.dateDisplay : (meta.date || slug);
+    const numStr = meta.edition ? '#' + String(meta.edition).padStart(3, '0') : '';
 
     const tagsHTML = tags.length ? `<div class="edition-tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>` : '';
 
-    let bodyHTML = '';
-    if (enBody) {
-      bodyHTML = `
-        <div class="lang-section active" data-lang="zh">${parseMarkdown(zhBody)}</div>
-        <hr class="lang-divider" data-label="ENGLISH EDITION">
-        <div class="lang-section" data-lang="en">${parseMarkdown(enBody)}</div>`;
-    } else {
-      bodyHTML = parseMarkdown(zhBody);
-    }
-
-    const numStr = meta.edition ? '#' + String(meta.edition).padStart(3, '0') : '';
-
     document.getElementById('article-view').innerHTML = `
-      <a href="/metacognition/" class="back-link" onclick="event.preventDefault(); buildIndex(editions)">
+      <a href="${BASE_PATH}" class="back-link" onclick="event.preventDefault();buildIndex(editions)">
         <span data-zh="← 返回目录" data-en="← Back to Index">← 返回目录</span>
       </a>
       <article class="article">
@@ -799,20 +763,16 @@ async function loadEdition(slug) {
           <div class="article-date">${dateDisplay}</div>
           ${tagsHTML}
         </div>
-        <div class="article-body">${bodyHTML}</div>
+        <div class="article-body">${parseMarkdown(body)}</div>
       </article>`;
 
     document.getElementById('loading').classList.add('hidden');
     document.getElementById('article-view').classList.remove('hidden');
-    applyLang(); // Re-apply after dynamic content
+    applyLang();
     window.scrollTo(0, 0);
-
-    // Update URL
-    if (history.pushState) {
-      history.pushState(null, '', BASE_PATH + '?edition=' + slug);
-    }
+    if (history.pushState) history.pushState(null, '', BASE_PATH + '?edition=' + slug);
   } catch (err) {
-    document.getElementById('loading').innerHTML = '<span data-zh="加载失败，请稍后再试" data-en="Failed to load, please try again">加载失败，请稍后再试</span>';
+    document.getElementById('loading').innerHTML = '<span data-zh="加载失败" data-en="Load failed">加载失败</span>';
     applyLang();
   }
 }
@@ -820,36 +780,24 @@ async function loadEdition(slug) {
 // ── Init ──
 document.getElementById('lang-toggle').addEventListener('click', toggleLang);
 document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
-
 initTheme();
 initLang();
 
-// Load editions
 fetch(BASE_PATH + 'editions.json')
   .then(r => r.json())
   .then(data => {
     buildIndex(data.editions);
-    // Check URL for direct edition link
     const params = new URLSearchParams(window.location.search);
-    const editionSlug = params.get('edition');
-    if (editionSlug) {
-      loadEdition(editionSlug);
-    }
+    if (params.get('edition')) loadEdition(params.get('edition'));
   })
   .catch(() => {
-    document.getElementById('loading').innerHTML = '<span data-zh="加载失败，请稍后再试" data-en="Failed to load, please try again">加载失败，请稍后再试</span>';
+    document.getElementById('loading').innerHTML = '<span data-zh="加载失败" data-en="Load failed">加载失败</span>';
     applyLang();
   });
 
-// Handle browser back/forward
 window.addEventListener('popstate', () => {
-  const params = new URLSearchParams(window.location.search);
-  const slug = params.get('edition');
-  if (slug) {
-    loadEdition(slug);
-  } else {
-    buildIndex(editions);
-  }
+  const slug = new URLSearchParams(window.location.search).get('edition');
+  slug ? loadEdition(slug) : buildIndex(editions);
 });
 </script>
 </body>
