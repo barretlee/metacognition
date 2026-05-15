@@ -3,8 +3,34 @@
   "name_en": "Metacognition — Horizon",
   "description": "认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。",
   "description_en": "Beyond cognition, across boundaries. Science, philosophy, investing, unfamiliar domains.",
-  "updated": "2026-05-15",
+  "updated": "2026-05-16",
   "editions": [
+    {
+      "slug": "2026-05-16",
+      "date": "2026-05-16",
+      "dateDisplay": "2026年5月16日",
+      "title": "你的肠道在替你思考 — 肠脑轴、专利悖论与债务周期中的反直觉真相",
+      "title_en": "Your Gut Is Thinking for You — Gut-Brain Axis, Patent Paradox, and Debt Cycle Counter-Intuitions",
+      "tags": [
+        "肠脑轴",
+        "微生物组",
+        "知识产权",
+        "专利丛林",
+        "神经音乐学",
+        "债务周期",
+        "逆周期经营"
+      ],
+      "tags_en": [
+        "Gut-Brain Axis",
+        "Microbiome",
+        "Intellectual Property",
+        "Patent Thicket",
+        "Neuromusicology",
+        "Debt Cycle",
+        "Countercyclical Business"
+      ],
+      "slug_en": "gut-brain-axis-patent-debt"
+    },
     {
       "slug": "2026-05-15",
       "date": "2026-05-15",
