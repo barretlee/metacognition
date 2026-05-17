@@ -3,8 +3,18 @@
   "name_en": "Metacognition — Horizon",
   "description": "认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。",
   "description_en": "Beyond cognition, across boundaries. Science, philosophy, investing, unfamiliar domains.",
-  "updated": "2026-05-16",
+  "updated": "2026-05-17",
   "editions": [
+    {
+      "slug": "2026-05-17",
+      "date": "2026-05-17",
+      "dateDisplay": "2026年5月17日",
+      "title": "你不是你以为的那个人 — 驯化综合征、序列风险与文明的操作系统",
+      "title_en": "You're Not Who You Think You Are — Domestication Syndrome, Sequence Risk, and Civilization's Operating System",
+      "tags": ["驯化综合征", "演化生物学", "序列风险", "财务认知", "人口坍缩", "有限责任", "加缪", "荒诞主义"],
+      "tags_en": ["Domestication Syndrome", "Evolutionary Biology", "Sequence Risk", "Financial Cognition", "Population Collapse", "Limited Liability", "Camus", "Absurdism"],
+      "slug_en": "domestication-syndrome-sequence-risk"
+    },
     {
       "slug": "2026-05-16",
       "date": "2026-05-16",
