@@ -3,8 +3,44 @@
   "name_en": "Metacognition — Horizon",
   "description": "认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。",
   "description_en": "Beyond cognition, across boundaries. Science, philosophy, investing, unfamiliar domains.",
-  "updated": "2026-05-25",
+  "updated": "2026-06-08",
   "editions": [
+    {
+      "slug": "2026-06-08",
+      "date": "2026-06-08",
+      "dateDisplay": "2026年6月8日",
+      "title": "你的基因是开源代码——水平基因转移、货币主权、消极能力与反垄断的意识形态战争",
+      "title_en": "Your Genes Are Open Source — Horizontal Gene Transfer, Monetary Sovereignty, Negative Capability, and Antitrust's Ideological War",
+      "slug_en": "horizontal-gene-transfer-mmt-negative-capability-antitrust",
+      "tags": [
+        "水平基因转移",
+        "内共生",
+        "演化生物学",
+        "现代货币理论",
+        "MMT",
+        "主权货币",
+        "消极能力",
+        "济慈",
+        "艺术洗钱",
+        "反垄断",
+        "消费者福利标准",
+        "新布兰代斯运动"
+      ],
+      "tags_en": [
+        "Horizontal Gene Transfer",
+        "Endosymbiosis",
+        "Evolutionary Biology",
+        "Modern Monetary Theory",
+        "MMT",
+        "Sovereign Currency",
+        "Negative Capability",
+        "Keats",
+        "Art Money Laundering",
+        "Antitrust",
+        "Consumer Welfare Standard",
+        "Neo-Brandeisian"
+      ]
+    },
     {
       "slug": "2026-05-25",
       "date": "2026-05-25",
