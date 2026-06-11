@@ -3,8 +3,18 @@
   "name_en": "Metacognition — Horizon",
   "description": "认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。",
   "description_en": "Beyond cognition, across boundaries. Science, philosophy, investing, unfamiliar domains.",
-  "updated": "2026-06-10",
+  "updated": "2026-06-11",
   "editions": [
+    {
+      "slug": "2026-06-11",
+      "date": "2026-06-11",
+      "dateDisplay": "2026年6月11日",
+      "title": "你的细胞里住着远古细菌——线粒体霸权、土壤的隐秘智能、包豪斯的百年幽灵与食品工业的神经黑客",
+      "title_en": "Ancient Bacteria Live in Your Cells — Mitochondrial Hegemony, Soil's Secret Intelligence, Bauhaus's Century-Long Ghost, and the Food Industry's Neural Hacking",
+      "slug_en": "mitochondria-soil-microbiome-bauhaus-ultra-processed-food",
+      "tags": ["线粒体", "Zone 2训练", "运动科学", "代谢健康", "土壤微生物组", "再生农业", "菌根网络", "消费平滑", "Die With Zero", "金融哲学", "包豪斯", "设计史", "功能主义", "超加工食品", "NOVA分类", "脑肠轴", "食品科学"],
+      "tags_en": ["Mitochondria", "Zone 2 Training", "Exercise Science", "Metabolic Health", "Soil Microbiome", "Regenerative Agriculture", "Mycorrhizal Networks", "Consumption Smoothing", "Die With Zero", "Financial Philosophy", "Bauhaus", "Design History", "Functionalism", "Ultra-Processed Food", "NOVA Classification", "Gut-Brain Axis", "Food Science"]
+    },
     {
       "slug": "2026-06-10",
       "date": "2026-06-10",
