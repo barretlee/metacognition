@@ -3,8 +3,18 @@
   "name_en": "Metacognition — Horizon",
   "description": "认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。",
   "description_en": "Beyond cognition, across boundaries. Science, philosophy, investing, unfamiliar domains.",
-  "updated": "2026-06-26",
+  "updated": "2026-06-27",
   "editions": [
+    {
+      "slug": "2026-06-27",
+      "date": "2026-06-27",
+      "dateDisplay": "2026年6月27日",
+      "title": "你的语言正在偷走你的颜色——萨丕尔-沃尔夫假说、因子投资的免费午餐、没有大脑的学习者与科斯的交易成本革命",
+      "title_en": "Your Language Is Stealing Your Colors — The Sapir-Whorf Hypothesis, Factor Investing's Free Lunch, Learners Without Brains, and the Coasean Revolution in Law",
+      "slug_en": "linguistic-relativity-factor-investing-plant-intelligence-coase-theorem",
+      "tags": ["语言相对论", "萨丕尔-沃尔夫假说", "语言与认知", "Lera Boroditsky", "因子投资", "法玛-弗伦奇", "动量因子", "价值因子", "智能贝塔", "植物智能", "含羞草实验", "捕蝇草计数", "Monica Gagliano", "科斯定理", "交易成本", "法律经济学", "社会成本问题"],
+      "tags_en": ["Linguistic Relativity", "Sapir-Whorf Hypothesis", "Language and Cognition", "Lera Boroditsky", "Factor Investing", "Fama-French", "Momentum Factor", "Value Factor", "Smart Beta", "Plant Intelligence", "Mimosa Experiment", "Venus Flytrap Counting", "Monica Gagliano", "Coase Theorem", "Transaction Costs", "Law and Economics", "Social Cost"]
+    },
     {
       "slug": "2026-06-26",
       "date": "2026-06-26",
