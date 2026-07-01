@@ -3,8 +3,46 @@
   "name_en": "Metacognition — Horizon",
   "description": "认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。",
   "description_en": "Beyond cognition, across boundaries. Science, philosophy, investing, unfamiliar domains.",
-  "updated": "2026-06-28",
+  "updated": "2026-07-01",
   "editions": [
+    {
+      "slug": "2026-07-01",
+      "date": "2026-07-01",
+      "dateDisplay": "2026年7月1日",
+      "title": "你的身体在你意识到之前替你做完了决定——内感受科学、加缪的反叛、货币幻觉、北极航道与日常艺术革命",
+      "title_en": "Your Body Decided Before You Did — Interoception, Camus' Revolt, Money Illusion, the Arctic Route, and the Art of Everyday Revolution",
+      "slug_en": "interoception-camus-money-illusion-arctic-route-fluxus",
+      "tags": [
+        "内感受",
+        "体感标记假说",
+        "达马西奥",
+        "加缪",
+        "荒谬主义",
+        "西西弗斯",
+        "货币幻觉",
+        "通胀",
+        "北极航道",
+        "北海航线",
+        "激浪派",
+        "日常艺术",
+        "事件乐谱"
+      ],
+      "tags_en": [
+        "Interoception",
+        "Somatic Marker Hypothesis",
+        "Damasio",
+        "Camus",
+        "Absurdism",
+        "Sisyphus",
+        "Money Illusion",
+        "Inflation",
+        "Northern Sea Route",
+        "Arctic Shipping",
+        "Fluxus",
+        "Everyday Art",
+        "Event Scores"
+      ]
+    },
     {
       "slug": "2026-06-28",
       "date": "2026-06-28",
