@@ -3,8 +3,40 @@
   "name_en": "Metacognition — Horizon",
   "description": "认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。",
   "description_en": "Beyond cognition, across boundaries. Science, philosophy, investing, unfamiliar domains.",
-  "updated": "2026-07-10",
+  "updated": "2026-07-11",
   "editions": [
+    {
+      "slug": "2026-07-11",
+      "date": "2026-07-11",
+      "dateDisplay": "2026年7月11日",
+      "title": "古希腊人2000年前造了一台计算机，然后所有人都把它忘了——安提基特拉机械装置、奥弗顿之窗的隐形牢笼、鲍莫尔成本病的残酷预言与疼痛的惊天谎言",
+      "title_en": "The Ancient Greeks Built a Computer 2,000 Years Ago, Then Everyone Forgot About It — The Antikythera Mechanism, the Invisible Cage of the Overton Window, the Cruel Prophecy of Baumol's Cost Disease, and Pain's Great Lie",
+      "slug_en": "antikythera-mechanism-overton-window-baumol-cost-disease-gate-control-pain",
+      "tags": [
+        "安提基特拉",
+        "古希腊科技",
+        "技术倒退",
+        "奥弗顿之窗",
+        "政治话语",
+        "鲍莫尔成本病",
+        "生产率",
+        "闸门控制理论",
+        "疼痛科学",
+        "慢性疼痛"
+      ],
+      "tags_en": [
+        "Antikythera Mechanism",
+        "Ancient Greek Technology",
+        "Technological Regression",
+        "Overton Window",
+        "Political Discourse",
+        "Baumol's Cost Disease",
+        "Productivity",
+        "Gate Control Theory",
+        "Pain Science",
+        "Chronic Pain"
+      ]
+    },
     {
       "slug": "2026-07-10",
       "date": "2026-07-10",
