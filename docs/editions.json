@@ -3,8 +3,44 @@
   "name_en": "Metacognition — Horizon",
   "description": "认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。",
   "description_en": "Beyond cognition, across boundaries. Science, philosophy, investing, unfamiliar domains.",
-  "updated": "2026-07-13",
+  "updated": "2026-07-14",
   "editions": [
+    {
+      "slug": "2026-07-14",
+      "date": "2026-07-14",
+      "dateDisplay": "2026年7月14日",
+      "title": "意义不在字典里——维特根斯坦的语言手术、端粒倒计时的生物钟、风险平价的四宫格秘密、信托的魔法分裂与博尔赫斯的无限图书馆",
+      "title_en": "Meaning Isn't in the Dictionary — Wittgenstein's Language Surgery, the Telomere Countdown, Risk Parity's Four-Quadrant Secret, Trust's Magical Split, and Borges' Infinite Library",
+      "slug_en": "meaning-isnt-in-the-dictionary",
+      "tags": [
+        "维特根斯坦",
+        "语言游戏",
+        "哲学研究",
+        "端粒",
+        "端粒酶",
+        "衰老",
+        "风险平价",
+        "全天候投资",
+        "达利欧",
+        "信托法",
+        "博尔赫斯",
+        "巴别图书馆"
+      ],
+      "tags_en": [
+        "Wittgenstein",
+        "Language Games",
+        "Philosophical Investigations",
+        "Telomeres",
+        "Telomerase",
+        "Aging",
+        "Risk Parity",
+        "All-Weather Portfolio",
+        "Dalio",
+        "Trust Law",
+        "Borges",
+        "Library of Babel"
+      ]
+    },
     {
       "slug": "2026-07-13",
       "date": "2026-07-13",
