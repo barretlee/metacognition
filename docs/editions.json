@@ -3,8 +3,40 @@
   "name_en": "Metacognition — Horizon",
   "description": "认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。",
   "description_en": "Beyond cognition, across boundaries. Science, philosophy, investing, unfamiliar domains.",
-  "updated": "2026-07-24",
+  "updated": "2026-07-25",
   "editions": [
+    {
+      "slug": "2026-07-25",
+      "date": "2026-07-25",
+      "dateDisplay": "2026年7月25日",
+      "title": "地球的皮肤在移动，你的大脑在掷硬币——板块构造、贝叶斯直觉、城市涌现、材料革命与被低估的保险",
+      "title_en": "Earth's Skin Moves, Your Brain Flips Coins — Plate Tectonics, Bayesian Intuition, Urban Emergence, Material Revolutions, and the Underrated Invention of Insurance",
+      "slug_en": "plate-tectonics-bayesian-urban-emergence-materials-insurance",
+      "tags": [
+        "贝叶斯思维",
+        "概率推理",
+        "板块构造",
+        "地球科学",
+        "城市涌现",
+        "简·雅各布斯",
+        "材料科学",
+        "材料革命",
+        "保险史",
+        "精算科学"
+      ],
+      "tags_en": [
+        "Bayesian Reasoning",
+        "Probability",
+        "Plate Tectonics",
+        "Geoscience",
+        "Urban Emergence",
+        "Jane Jacobs",
+        "Materials Science",
+        "Materials Revolution",
+        "Insurance History",
+        "Actuarial Science"
+      ]
+    },
     {
       "slug": "2026-07-24",
       "date": "2026-07-24",
