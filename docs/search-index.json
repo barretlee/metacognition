@@ -1,5 +1,39 @@
 [
   {
+    "slug": "2026-07-26",
+    "slug_en": "signaling-prisoners-dilemma-godel-attachment-planetary-boundaries",
+    "date": "2026-07-26",
+    "dateDisplay": "2026年7月26日",
+    "title": "孔雀的尾巴是一场军备竞赛——信号博弈、囚徒困境的演化解法、哥德尔的不完备诅咒、三岁的依恋剧本与地球的九个安全边界",
+    "title_en": "The Peacock's Arms Race — Signaling Games, How Cooperation Evolves from Selfishness, Gödel's Incompleteness Curse, Your Three-Year-Old Attachment Script, and Earth's Nine Boundaries",
+    "tags": [
+      "信号理论",
+      "博弈论",
+      "囚徒困境",
+      "演化博弈",
+      "哥德尔不完备定理",
+      "数学哲学",
+      "依恋理论",
+      "儿童发展",
+      "行星边界",
+      "地球系统科学"
+    ],
+    "tags_en": [
+      "Signaling Theory",
+      "Game Theory",
+      "Prisoner's Dilemma",
+      "Evolutionary Game Theory",
+      "Gödel's Incompleteness",
+      "Philosophy of Mathematics",
+      "Attachment Theory",
+      "Child Development",
+      "Planetary Boundaries",
+      "Earth System Science"
+    ],
+    "excerpt": "1973 年，一个叫迈克尔·斯彭斯的哈佛博士生在导师面前抛出一个问题：如果所有求职者都在简历上写「我很优秀」，雇主怎么区分谁是真正优秀的？斯彭斯的答案后来拿了诺贝尔经济学奖——关键在于**信号的成本**。一个真正优秀的人愿意付出的信号成本（比如读四年哈佛），和一个不优秀的人愿意付出的成本，是不对等的。哈佛学位教了什么不重要，重要的是它筛选出了「愿意忍受四年高强度折磨的人」——这才是雇主要买的信号。",
+    "excerpt_en": "In 1973, a Harvard PhD student named Michael Spence posed a question to his advisor: if every job applicant writes \"I'm excellent\" on their résumé, how does an employer distinguish the truly excellent"
+  },
+  {
     "slug": "2026-07-25",
     "slug_en": "plate-tectonics-bayesian-urban-emergence-materials-insurance",
     "date": "2026-07-25",

@@ -5,8 +5,15 @@
     <link>https://barretlee.github.io/metacognition</link>
     <description>认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 25 Jul 2026 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2026 00:00:00 +0800</lastBuildDate>
     <atom:link href="https://barretlee.github.io/metacognition/feed/zh.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>孔雀的尾巴是一场军备竞赛——信号博弈、囚徒困境的演化解法、哥德尔的不完备诅咒、三岁的依恋剧本与地球的九个安全边界</title>
+      <link>https://barretlee.github.io/metacognition/signaling-prisoners-dilemma-godel-attachment-planetary-boundaries</link>
+      <description><![CDATA[1973 年，一个叫迈克尔·斯彭斯的哈佛博士生在导师面前抛出一个问题：如果所有求职者都在简历上写「我很优秀」，雇主怎么区分谁是真正优秀的？斯彭斯的答案后来拿了诺贝尔经济学奖——关键在于**信号的成本**。一个真正优秀的人愿意付出的信号成本（比如读四年哈佛），和一个不优秀的人愿意付出的成本，是不对等的。哈佛学位教了什么不重要，重要的是它筛选出了「愿意忍受四年高强度折磨的人」——这才是雇主要买的信号。]]></description>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://barretlee.github.io/metacognition/signaling-prisoners-dilemma-godel-attachment-planetary-boundaries</guid>
+    </item>
     <item>
       <title>地球的皮肤在移动，你的大脑在掷硬币——板块构造、贝叶斯直觉、城市涌现、材料革命与被低估的保险</title>
       <link>https://barretlee.github.io/metacognition/plate-tectonics-bayesian-urban-emergence-materials-insurance</link>
