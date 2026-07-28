@@ -3,8 +3,44 @@
   "name_en": "Metacognition — Horizon",
   "description": "认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。",
   "description_en": "Beyond cognition, across boundaries. Science, philosophy, investing, unfamiliar domains.",
-  "updated": "2026-07-27",
+  "updated": "2026-07-28",
   "editions": [
+    {
+      "slug": "2026-07-28",
+      "date": "2026-07-28",
+      "dateDisplay": "2026年7月28日",
+      "title": "你睡着的时候，大脑在给自己洗澡——Glymphatic 系统的深夜值班、尼采永恒回归的残酷筛选器、复利为什么天然反直觉、北极融冰正在打开的新贸易走廊与渐进超负荷的人生通用法则",
+      "title_en": "While You Sleep, Your Brain Washes Itself — The Glymphatic System's Night Shift, Nietzsche's Eternal Return as a Brutal Filter, Why Compounding Feels So Wrong, How Melting Arctic Ice Opens New Trade Corridors, and Progressive Overload as a Universal Law",
+      "slug_en": "glymphatic-brain-cleaning-nietzsche-eternal-return-compounding-arctic-trade-progressive-overload",
+      "tags": [
+        "睡眠科学",
+        "Glymphatic系统",
+        "阿尔茨海默",
+        "尼采",
+        "永恒回归",
+        "生命哲学",
+        "复利",
+        "指数增长",
+        "北极航道",
+        "地缘政治",
+        "渐进超负荷",
+        "力量训练"
+      ],
+      "tags_en": [
+        "Sleep Science",
+        "Glymphatic System",
+        "Alzheimer's",
+        "Nietzsche",
+        "Eternal Return",
+        "Philosophy of Life",
+        "Compounding",
+        "Exponential Growth",
+        "Arctic Shipping",
+        "Geopolitics",
+        "Progressive Overload",
+        "Strength Training"
+      ]
+    },
     {
       "slug": "2026-07-27",
       "date": "2026-07-27",
