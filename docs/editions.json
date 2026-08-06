@@ -3,8 +3,45 @@
   "name_en": "Metacognition — Horizon",
   "description": "认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。",
   "description_en": "Beyond cognition, across boundaries. Science, philosophy, investing, unfamiliar domains.",
-  "updated": "2026-08-05",
+  "updated": "2026-08-06",
   "editions": [
+    {
+      "slug": "2026-08-06",
+      "date": "2026-08-06",
+      "dateDisplay": "2026年8月6日",
+      "title": "森林的地下有一条互联网比你用的那个聪明得多——真菌网络的分布式决策、一个普通人如何成为屠杀机器的零件、为什么聪明人反而赚不到钱、那个让全场观众安静4分33秒的男人在教我们什么、以及你的肺里可能已经住了塑料微粒",
+      "title_en": "The Forest Has an Underground Internet Smarter Than Yours — Distributed Decisions in Fungal Networks, How Ordinary People Become Components of Killing Machines, Why Smart People Can't Make Money, What the Man Who Made Audiences Sit in Silence for 4'33\" Is Teaching Us, and There Might Be Plastic Living in Your Lungs",
+      "slug_en": "fungal-intelligence-mycelium-arendt-banality-evil-portfolio-diversification-john-cage-silence-microplastics",
+      "tags": [
+        "真菌智能",
+        "菌丝网络",
+        "平庸之恶",
+        "汉娜·阿伦特",
+        "米尔格拉姆实验",
+        "资产配置",
+        "投资组合理论",
+        "分散化",
+        "约翰·凯奇",
+        "4分33秒",
+        "沉默",
+        "微塑料",
+        "环境健康"
+      ],
+      "tags_en": [
+        "Fungal Intelligence",
+        "Mycelial Network",
+        "Banality of Evil",
+        "Hannah Arendt",
+        "Milgram Experiment",
+        "Portfolio Theory",
+        "Diversification",
+        "John Cage",
+        "4'33\"",
+        "Silence",
+        "Microplastics",
+        "Environmental Health"
+      ]
+    },
     {
       "slug": "2026-08-05",
       "date": "2026-08-05",
