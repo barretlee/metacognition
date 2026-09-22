@@ -5,8 +5,15 @@
     <link>https://barretlee.github.io/metacognition</link>
     <description>认知之外，思维之疆。认知科学、哲学、投资、陌生领域，跳出思维舒适区。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 21 Sep 2026 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 00:00:00 +0800</lastBuildDate>
     <atom:link href="https://barretlee.github.io/metacognition/feed/zh.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>你以为神经元像电线一样连成大脑，其实它们靠一管『化学信使』在缝隙里喊话——1921 年 Loewi 的蛙心实验戳穿了『神经网络』这个隐喻；以及 1948 年才被造出来的『bit』如何把信息定义成『消除不确定性』、一个牧师死后才发表、却成了你每天调参都在暗中使用的『贝叶斯定理』、一只鹅颈瓶如何杀死『生命自然发生说』、和四条能让你证明『到底是谁导致了它』的『科赫法则』</title>
+      <link>https://barretlee.github.io/metacognition/chemical-synapse-shannon-information-bayes-theorem-pasteur-germ-theory-kochs-postulates</link>
+      <description><![CDATA[]]></description>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://barretlee.github.io/metacognition/chemical-synapse-shannon-information-bayes-theorem-pasteur-germ-theory-kochs-postulates</guid>
+    </item>
     <item>
       <title>你的大脑自带一张用六边形坐标铺成的『内置 GPS』——2014 年诺奖点名的『位置细胞与网格细胞』如何改写你对空间的理解；以及一条让垃圾内容把好内容挤出市场的『格雷欣法则』、一个被费曼称为『量子力学唯一谜团』的『双缝实验』、一所只存在了 14 年却重塑了整个现代世界的『包豪斯』、和一条提醒你『权利也会过期』的『诉讼时效』</title>
       <link>https://barretlee.github.io/metacognition/place-cells-grid-cells-greshams-law-double-slit-bauhaus-statute-of-limitations</link>
