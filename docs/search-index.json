@@ -1,5 +1,86 @@
 [
   {
+    "slug": "2026-11-06",
+    "slug_en": "bacteria-lateral-gene-transfer",
+    "date": "2026-11-06",
+    "dateDisplay": "2026年11月6日",
+    "title": "细菌从不看族谱，它们随时互相借基因——你以为的『物种边界』，在微生物那里根本不存在；以及一个靠扔陶片决定谁该被流放的投票法、一份世界变了就能甩掉的合同、一只能看见磁场的海龟，和一只被达尔文亲口承认『荒谬到极点』的眼睛",
+    "title_en": "Bacteria Never Check the Family Tree — They Just Borrow Genes; Plus a Vote That Exiled Athens' Best Men, a Contract That Expires When the World Changes, a Turtle That Sees Magnetic Fields, and an Eye Darwin Called Absurd",
+    "tags": [
+      "水平基因转移",
+      "horizontal gene transfer",
+      "基因横向跳跃",
+      "Lederberg",
+      "Tatum",
+      "细菌接合",
+      "耐药基因",
+      "物种边界",
+      "生命之树",
+      "Woese",
+      "内共生",
+      "基因流动",
+      "陶片放逐法",
+      "ostracism",
+      "雅典民主",
+      "克里斯提尼",
+      "雅典政制",
+      "多数暴政",
+      "否决权",
+      "情势变更",
+      "合同落空",
+      "frustration",
+      "Taylor v Caldwell",
+      "交易基础障碍",
+      "德国民法典313",
+      "法国民法典1195",
+      "不可抗力",
+      "磁感知",
+      "magnetoreception",
+      "隐花色素",
+      "cryptochrome",
+      "自由基对",
+      "海龟迁徙",
+      "Wiltschko",
+      "Mouritsen",
+      "地磁场",
+      "眼睛演化",
+      "evolution of the eye",
+      "Nilsson",
+      "Pelger",
+      "三叶虫",
+      "盲眼鱼",
+      "自然选择",
+      "渐变论"
+    ],
+    "tags_en": [
+      "Horizontal Gene Transfer",
+      "Lederberg",
+      "Bacterial Conjugation",
+      "Antibiotic Resistance",
+      "Species Boundary",
+      "Tree of Life",
+      "Woese",
+      "Endosymbiosis",
+      "Ostracism",
+      "Athenian Democracy",
+      "Majority Tyranny",
+      "Changed Circumstances",
+      "Frustration",
+      "Taylor v Caldwell",
+      "Force Majeure",
+      "Magnetoreception",
+      "Cryptochrome",
+      "Radical Pair",
+      "Sea Turtle Migration",
+      "Eye Evolution",
+      "Nilsson & Pelger",
+      "Blind Cave Fish",
+      "Natural Selection"
+    ],
+    "excerpt": "先问你一个问题：如果明天人类发明出能把某种能力直接拷给另一个人的技术，而你最好的朋友刚好学会了这个能力，你要不要也来一份？",
+    "excerpt_en": ""
+  },
+  {
     "slug": "2026-11-05",
     "slug_en": "benford-fingerprint-and-the-math-of-impossible-systems",
     "date": "2026-11-05",
@@ -64,7 +145,7 @@
       "Heisenberg",
       "Uncertainty"
     ],
-    "excerpt": "",
+    "excerpt": "这个场景你可能在电影里见过：FBI 敲开华尔街某位投资顾问的门，说要核对基金流水。对方一紧张，当场承认：\"其实里面什么都没有，全是假的。\"",
     "excerpt_en": ""
   },
   {
@@ -165,7 +246,7 @@
       "Queneau",
       "constrained writing"
     ],
-    "excerpt": "",
+    "excerpt": "你去超市买过一只 4.99 美元的热烤鸡吗？Costco 那只烤鸡，从 2009 年到现在价格一个子儿没动——美国食品通胀这些年涨了三成多，它还卖 4.99。宜家的肉丸、那支 1 元的冰淇淋甜筒、便利店的 9.9 元咖啡，每个大零售商都养着一两样\"看起来在赔钱\"的东西。你可能会想：这笔亏本买卖迟早要取消吧？",
     "excerpt_en": ""
   },
   {
@@ -263,7 +344,7 @@
       "oligopoly",
       "drug pricing"
     ],
-    "excerpt": "",
+    "excerpt": "Alan Turing 这个名字，你熟悉到几乎能条件反射：图灵机、停机问题、图灵测试、二战密码破译。但很少有人知道，这个计算机科学之父生前发表的最后一篇重要论文，跟计算机没有半点关系——它讲的是\"一只花豹身上的斑点是怎么长出来的\"。1952 年，图灵在《皇家学会哲学汇刊》上发表了《形态发生的化学基础》(The Chemical Basis of Morphogenesis)，提出一个大胆到近乎疯狂",
     "excerpt_en": ""
   },
   {
@@ -334,7 +415,7 @@
       "Sedentary",
       "Sitting"
     ],
-    "excerpt": "",
+    "excerpt": "西西弗斯是希腊神话里最惨的倒霉蛋：他耍小聪明得罪了诸神，被判了一种最恶毒的刑罚——每天把一块巨石推上山顶，可一到顶，石头必然滚回山脚，他只能折返，重头再来，永生永世，循环不止。没有终点，没有意义，纯纯的徒劳。1942 年，法国作家阿尔贝·加缪写了本小册子《西西弗神话》，开篇就扔下一句让你头皮发麻的话：**真正严肃的哲学问题只有一个，那就是自杀——判断人生值不值得活，就等于回答了哲学的根本问题。**",
     "excerpt_en": ""
   },
   {
@@ -393,7 +474,7 @@
       "Game Theory",
       "A Beautiful Mind"
     ],
-    "excerpt": "",
+    "excerpt": "1995 年，美国匹兹堡有个叫 McArthur Wheeler 的男人，光天化日抢了两家银行，没戴任何伪装——但他在脸上抹了柠檬汁。他的逻辑荒诞又自洽：柠檬汁能当\"隐形墨水\"写字，所以涂在脸上，监控摄像头应该就拍不到他了。警方调出监控，那张脸清清楚楚，当晚就抓到了人。被捕时他一脸难以置信，说出了那句后来被写进教科书的话：\"可是我涂了果汁啊。\"",
     "excerpt_en": ""
   },
   {
@@ -473,7 +554,7 @@
       "Causal Attribution",
       "Tuberculosis"
     ],
-    "excerpt": "",
+    "excerpt": "你天天写神经网络，脑子里那个模型大概是：神经元是节点，突触是带权重的边，信号沿着电线一样的连接哗哗地跑。这个隐喻好用，但它错得离谱。**真实的神经元根本不互相接触**——两根神经元之间留着一道 20 纳米的缝隙，叫突触间隙，信号穿过这道缝，靠的不是电流，是一管**化学物质**。",
     "excerpt_en": ""
   },
   {
@@ -544,7 +625,7 @@
       "statute of limitations",
       "rights expiry"
     ],
-    "excerpt": "",
+    "excerpt": "你大概以为，大脑记路的方式和你写程序差不多：进来一张图，建个 `Map` 对象，把位置 `key` 存进去，下次查表。但 2014 年的诺贝尔生理学或医学奖，颁给了一个把这种直觉彻底掀翻的发现：大脑里根本没有一张\"存好的地图\"，它有的是**一套现场生成的坐标系**。",
     "excerpt_en": ""
   },
   {
@@ -646,7 +727,7 @@
       "Eulerian Path",
       "Uselessness"
     ],
-    "excerpt": "",
+    "excerpt": "你大概接受过一条教科书级的铁律：生命的信息流动是单向的——DNA 转录成 RNA，RNA 翻译成蛋白质，这是分子生物学的\"中心法则\"。蛋白质是这条流水线的终点，是\"代码\"执行出来的\"产物\"。它没有信息，只有结构；它不会遗传，只会被替换。直到 1982 年，斯坦福的 Stanley Prusiner 在 *Science* 上发表了一篇论文，用一个词把这条铁律戳了个洞：朊病毒（prion）。",
     "excerpt_en": ""
   },
   {
@@ -718,7 +799,7 @@
       "Dead Code",
       "YAGNI"
     ],
-    "excerpt": "",
+    "excerpt": "关于\"人为什么会共情、会模仿、会看别人做一遍就自己学会\"，神经科学给出过一个漂亮得近乎玄学的答案。1996 年，意大利帕尔马大学的 Rizzolatti 团队在 *Brain* 上发表了一项后来被反复引用的发现：他们在猕猴前运动皮层一个叫 F5 的区域，找到了一类奇特的神经元。这类神经元在猴子**自己**伸手抓一颗花生的时候会放电；更诡异的是，当猴子只是**看着**实验员伸手抓花生、自己一动不动的",
     "excerpt_en": ""
   },
   {
@@ -794,7 +875,7 @@
       "Decision Making",
       "Behavioral Economics"
     ],
-    "excerpt": "",
+    "excerpt": "关于大脑，你大概已经听过太多\"专注力\"\"心流\"\"深度工作\"的布道。但有一条被主流效率叙事长期无视的事实，恰恰反过来：**大脑在你不专注、甚至\"什么都没做\"的时候，会切进一套高度活跃的\"后台系统\"，它的名字叫默认模式网络（Default Mode Network, DMN）。** 这个概念是 2001 年 Marcus Raichle 团队在 *PNAS* 上正式提出来的。他们做正电子发射断层扫描时",
     "excerpt_en": ""
   },
   {
@@ -874,7 +955,7 @@
       "Art",
       "Automation"
     ],
-    "excerpt": "",
+    "excerpt": "「一起放电的神经元，会连在一起。」这句话如今是神经科学界的口头禅，但它背后是一条被彻底证实的、足以改变你自我认知的规律：**大脑不是一块在青春期就\"烧录定型\"的硬件，它是一张终其一生都在被不断重写的网。** 提出这个洞见的人叫 **Donald Hebb**，1949 年他在《The Organization of Behavior》里写下那条后来被称作\"赫布定律\"的假说：当两个神经元反复同时兴奋",
     "excerpt_en": ""
   },
   {
@@ -941,7 +1022,7 @@
       "Superbug",
       "Tragedy of the Commons"
     ],
-    "excerpt": "",
+    "excerpt": "你花大量时间设计通信协议：Agent 之间传什么、字段怎么定义、语义怎么对齐。但你可能不知道，动物界最早、也最优雅的一套\"通信协议\"，早在人类出现之前几千万年就上线了，而且直到 1973 年才被人破译。",
     "excerpt_en": ""
   },
   {
@@ -1010,7 +1091,7 @@
       "Eradication",
       "Herd Immunity"
     ],
-    "excerpt": "",
+    "excerpt": "你每天花大量时间思考「网络」：服务怎么组网、Agent 怎么互相调、数据怎么在节点间流动。但你可能从没想过，你脚下几十厘米的土层里，就铺着一张人类互联网要叫祖师爷的网络——它存在了几亿年，节点是树，网线是真菌。",
     "excerpt_en": ""
   },
   {
@@ -1086,7 +1167,7 @@
       "Antigen",
       "Immunity"
     ],
-    "excerpt": "",
+    "excerpt": "想象一下：你在一个伸手不见五指的房间里，不靠眼睛、不靠手摸，却能精准地抓住一只正在飞的飞蛾。这不是武侠小说，这是蝙蝠每天晚上的日常。它在黑暗中靠的是一种你几乎没有认真想过的能力——**回声定位（echolocation）**。",
     "excerpt_en": ""
   },
   {
@@ -1150,7 +1231,7 @@
       "architecture",
       "Salk Institute"
     ],
-    "excerpt": "",
+    "excerpt": "每年秋天，一只体重不到 30 克的欧洲知更鸟，会从北欧一路飞到撒哈拉以南，跨越几千公里，精准得让你怀疑它偷偷装了 GPS。更离奇的是：把它关进一个全黑的、没有星星、没有太阳、没有任何参照物的笼子里，它依然会本能地朝正确的方向扑腾。它在用一样你看不见、也造不出来的东西导航——**地球磁场**。",
     "excerpt_en": ""
   },
   {
@@ -1215,7 +1296,7 @@
       "Enantiomer",
       "Drug Regulation"
     ],
-    "excerpt": "",
+    "excerpt": "你书桌旁的地球仪上，南美洲的东海岸和非洲的西海岸，像两块拼图一样严丝合缝。这个\"巧合\"，几乎每个小孩子看地图时都发现过，但整整几个世纪，没有一个地质学家敢认真对待它——因为\"认真对待\"意味着要承认一件当时听来荒诞至极的事：**大陆在动。**",
     "excerpt_en": ""
   },
   {
@@ -1290,7 +1371,7 @@
       "Childbed Fever",
       "Medical History"
     ],
-    "excerpt": "",
+    "excerpt": "你身上有个东西，每分每秒都在精确地、不可逆地倒数——不是手机电量，是**端粒（telomere）**。",
     "excerpt_en": ""
   },
   {
@@ -1367,7 +1448,7 @@
       "Supernova",
       "Origin of Elements"
     ],
-    "excerpt": "",
+    "excerpt": "如果告诉你，你的身体无时无刻不在\"吃掉自己\"，你的第一反应大概是\"这听着像某种绝症\"。但恰恰相反，这是细胞最精妙、最古老的生存策略之一。它有个正式的名字——**自噬（autophagy）**，字面意思就是\"自食\"。",
     "excerpt_en": ""
   },
   {
@@ -1435,7 +1516,7 @@
       "Zhu Zaiyu",
       "Music Theory"
     ],
-    "excerpt": "",
+    "excerpt": "我们习惯把睡眠当成\"关机休息\"，顶多觉得\"熬夜会累\"。但过去十年神经科学最震撼的发现之一，彻底改写了这个认知：睡眠不是大脑的\"休息时间\"，而是大脑的\"保洁时间\"。你睡觉时，脑子不是闲着，而是在偷偷做大扫除。",
     "excerpt_en": ""
   },
   {
@@ -1501,7 +1582,7 @@
       "Phantom Limb Pain",
       "Pain Is Not Damage"
     ],
-    "excerpt": "",
+    "excerpt": "如果你觉得\"智能\"必须长在一个脑子里，那你该认识一下黏菌（Physarum polycephalum）。这是一种单细胞变形虫——严格说是一个巨大的多核细胞，几十亿个细胞核共享同一团细胞质，没有大脑，没有神经元，没有任何中央处理器。但就是这团\"没有脑子\"的黄色黏液，干出了让算法工程师汗颜的事。",
     "excerpt_en": ""
   },
   {
@@ -1571,7 +1652,7 @@
       "Endocrine",
       "Longevity"
     ],
-    "excerpt": "",
+    "excerpt": "\"安慰剂效应\"这四个字，在中文语境里几乎成了骂人的话——\"那不过是个安慰剂\"，意思是\"那玩意儿没用，只是你心理作用\"。但这句话藏着一个巨大的误解：**\"心理作用\"恰恰是人体里最真实、最硬核的一种作用机制。** 它不是你\"想象自己好了\"，而是你的大脑真的制造出了化学物质，改变了你的生理状态。",
     "excerpt_en": ""
   },
   {
@@ -1625,8 +1706,8 @@
       "DABUS",
       "AI Inventor"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "你有没有过这种体验：某一天，某个完全不设防的瞬间，一缕气味飘进来——可能是某种牌子的洗衣粉、雨后的泥土、旧书页、外婆厨房里炸东西的油烟味——然后\"轰\"的一下，你被整个甩回了十年前。不是\"想起\"十年前，是**回到**十年前，连当时的温度、光线、心跳都回来了。这不是矫情，这是你的嗅觉在你身上干了一件其他任何感官都干不出来的事。",
+    "excerpt_en": "You've had this experience: some unguarded moment, a wisp of scent drifts in — a certain brand of detergent, rain-soaked earth, old book pages, the smell of frying in a grandmother's kitchen — and the"
   },
   {
     "slug": "2026-08-16",
@@ -1679,8 +1760,8 @@
       "Geopolitics",
       "World Island"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "你脑子里有一块非常固执的默认假设：时间是一台匀速运转的钟，客观、均匀、一分一秒地流，而你只是坐在河边看它流过去。神经科学会告诉你，这个画面基本是错的——你的大脑里根本没有一台\"时钟\"，它只有一个**记录器**。",
+    "excerpt_en": "There is a stubborn default assumption baked into your head: that time is a uniformly ticking clock — objective, even, flowing second by second — and you're just sitting on the bank watching it pass. "
   },
   {
     "slug": "2026-08-15",
@@ -1733,8 +1814,8 @@
       "Property Rights",
       "Externalities"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "1980 年，语言学家莱考夫（George Lakoff）和哲学家约翰逊（Mark Johnson）写了一本薄薄的书《我们赖以生存的隐喻》（*Metaphors We Live By*），一句话拆掉了两千年来关于\"理性\"的一整套幻觉。",
+    "excerpt_en": "In 1980, linguist George Lakoff and philosopher Mark Johnson published a slim book called *Metaphors We Live By*, and with one sentence they dismantled two thousand years of illusions about \"reason.\""
   },
   {
     "slug": "2026-08-14",
@@ -1781,8 +1862,8 @@
       "HRV",
       "Autonomic Nervous System"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "物理学里藏着一个让人不舒服的事实：微观世界里，没有一条基本定律规定时间必须向前。牛顿定律、薛定谔方程，把时间的符号反过来，物理照样成立——它们对时间是完全\"中立\"的。可你把一杯热咖啡放在桌上，它只会凉下来，不会自己重新变热；打碎的杯子不会自己拼回去；你一天天老去，不会一天天变年轻。这个\"单向性\"到底从哪儿来？",
+    "excerpt_en": "Physics hides an uncomfortable fact: at the microscopic level, no fundamental law insists that time must run forward. Newton's laws and Schrödinger's equation both work fine if you flip the sign of ti"
   },
   {
     "slug": "2026-08-13",
@@ -1825,8 +1906,8 @@
       "Negative Capability",
       "John Keats"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "1974 年，认知心理学家 Elizabeth Loftus 做了一个改变司法史的实验：给被试看一段车祸录像，然后问「两辆车 **撞上**（smashed）时时速多少？」和「两辆车 **接触**（contacted）时时速多少？」用「撞上」这个词的人平均估计 41 英里/小时，用「接触」的人只有 32 英里。更可怕的是，一周后再问「你看到地上的碎玻璃了吗？」——被问过「撞上」的人里，有三分之一信誓",
+    "excerpt_en": "In 1974, cognitive psychologist Elizabeth Loftus ran an experiment that changed legal history. She showed participants a film of a car accident, then asked, \"About how fast were the cars going when th"
   },
   {
     "slug": "2026-08-12",
@@ -1871,8 +1952,8 @@
       "Corporate Law",
       "AI Liability"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "维特根斯坦写了两本完全矛盾的杰作。",
+    "excerpt_en": "Wittgenstein wrote two masterpieces that contradict each other completely."
   },
   {
     "slug": "2026-08-11",
@@ -1919,7 +2000,7 @@
       "Cory Doctorow",
       "Network Effects"
     ],
-    "excerpt": "",
+    "excerpt": "2017年，Richard Thaler 拿了诺贝尔经济学奖。不是因为什么深奥的数学模型，而是因为他证明了一个让人不太舒服的事实：**你以为是自己做的选择，其实是别人替你摆好的。**",
     "excerpt_en": ""
   },
   {
@@ -1968,7 +2049,7 @@
       "Digital Assets",
       "Inheritance Law"
     ],
-    "excerpt": "",
+    "excerpt": "如果基因组是一本书的完整文本，表观遗传学就是那些荧光笔标记、便利贴和折角——它们不改变文字本身，但决定了哪些段落被朗读、哪些被跳过。",
     "excerpt_en": ""
   },
   {
@@ -2031,7 +2112,7 @@
       "Robotics",
       "Human-Robot Interaction"
     ],
-    "excerpt": "",
+    "excerpt": "丹尼尔·卡尼曼在 2011 年出版的《思考，快与慢》几乎重新定义了大众对\"思考\"这件事的理解。他提出了一个简洁到残忍的模型：人的大脑里有两套系统在运作。",
     "excerpt_en": ""
   },
   {
@@ -2089,7 +2170,7 @@
       "Berger",
       "Ways of Seeing"
     ],
-    "excerpt": "",
+    "excerpt": "1844年，丹麦哲学家克尔凯郭尔出版了一本小书叫《焦虑的概念》。他在里面写了一句让人头皮发麻的话：**\"焦虑是自由的眩晕。\"** 这个比喻精准得可怕——就像站在悬崖边往下看，你害怕的不是脚下的大地，而是意识到\"我可以跳下去\"这个事实本身。焦虑的根源不是外部的危险，而是内部的自由。",
     "excerpt_en": ""
   },
   {
@@ -2135,7 +2216,7 @@
       "Longevity",
       "Cardiorespiratory Fitness"
     ],
-    "excerpt": "",
+    "excerpt": "大多数人对「思考」的理解是：大脑接收信息、处理、输出。这是一个自上而下的中央集权模型，很符合工程师的直觉。但过去十五年，神经科学正在把这个模型拆得七零八落。",
     "excerpt_en": ""
   },
   {
@@ -2174,8 +2255,8 @@
       "Microplastics",
       "Environmental Health"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "2018年，科学家在俄勒冈的 Malheur 国家森林里发现了一个骇人听闻的东西——一株蜜环菌（*Armillaria ostoyae*），它的菌丝网络在地下蔓延了 9.6 平方公里。这是地球上已知最大的单一生物体，已经默默活了 2,400 到 8,000 年。",
+    "excerpt_en": "In 2018, scientists discovered something staggering in Oregon's Malheur National Forest — a single *Armillaria ostoyae* (honey fungus) whose mycelial network sprawls across 9.6 square kilometers under"
   },
   {
     "slug": "2026-08-05",
@@ -2227,7 +2308,7 @@
       "Consumption Inertia",
       "Relative Income Hypothesis"
     ],
-    "excerpt": "",
+    "excerpt": "威廉·斯坦利·杰文斯（William Stanley Jevons）在 29 岁时已经是英国最重要的经济学家之一——和门格尔、瓦尔拉斯并列，三人独立地发起了经济学史上的「边际革命」。但他的第一本重要著作出版时他只有 25 岁，书名毫不含糊：《煤炭问题》（*The Coal Question*）。杰文斯在这本书里做的事很简单：他算了算英国的煤炭储量除以年消耗速度。答案不太乐观——他估计英国将在几十年",
     "excerpt_en": ""
   },
   {
@@ -2290,8 +2371,8 @@
       "Use",
       "Pension Fund"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "卢钦斯的水壶实验是认知科学史上最简洁优雅的设计之一。给受试者 A、B、C 三个水壶，容量分别是 21 单位、127 单位、3 单位。目标：量出 100 单位水。解法：B − A − 2C = 127 − 21 − 6 = 100。然后是下一组数：A=14，B=46，C=5，目标=22。解法：B − A − 2C = 46 − 14 − 10 = 22。同样的公式——B − A − 2C——连着用了",
+    "excerpt_en": "Luchins's water jug experiment is one of the most elegantly designed studies in the history of cognitive science. Subjects are given three jugs — A (21 units), B (127 units), C (3 units) — and told to"
   },
   {
     "slug": "2026-08-03",
@@ -2357,7 +2438,7 @@
       "Knowledge Filtering",
       "Survival Time"
     ],
-    "excerpt": "",
+    "excerpt": "这听起来像实验出了错。苯酚——当时的标准手术消毒剂——在低浓度下促进了酵母的代谢活性，但在高浓度下杀死了它们。Hugo Schulz 把这个现象记录在一篇没人注意的德国药学期刊上。他没有想到——至少当时没有——他观察到的是一个横跨生物学、医学、药理学、运动科学乃至材料科学的普适法则。**同样的东西，少是药，多是毒。** 这是双向的：少不是「弱版的多」——它触发的生物反应和「多」完全相反。",
     "excerpt_en": ""
   },
   {
@@ -2405,7 +2486,7 @@
       "Renewable Energy",
       "Baseload Power"
     ],
-    "excerpt": "",
+    "excerpt": "这不是玄学，不是「大自然使人心情愉悦」的鸡汤。这是定量数据。宾夕法尼亚州的郊区医院，外科病房的走廊两边各有一排房间。一面对着砖墙，另一面对着几棵落叶树。Roger Ulrich——后来成为环境心理学领域被引用最多的研究者之一——对比了两组病人的术后恢复数据。结果精确到剂量：看到树的病人平均多用了多少止痛药、多住了多少天院、护士记录的负面评价多出几条。全部偏向了砖墙那组。**窗外有没有树，决定了你的",
     "excerpt_en": ""
   },
   {
@@ -2461,8 +2542,8 @@
       "Drake Equation",
       "Rare Earth"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "2007 年，麻省理工学院认知科学家 Lera Boroditsky 和她的合作者做了一个实验。俄语里没有「蓝色」这个词——它强制区分浅蓝（goluboy / голубой）和深蓝（siniy / синий）。英语没有这个强制区分。Boroditsky 让俄语母语者和英语母语者判断两个蓝色方块的颜色是否相同，同时用 fMRI 监测大脑活动。结果是：**俄语母语者在区分跨类别蓝色（一个 golu",
+    "excerpt_en": "In 2007, MIT cognitive scientist Lera Boroditsky and her collaborators ran an experiment. Russian has no single word for \"blue\" — it *forces* a distinction between light blue (goluboy / голубой) and d"
   },
   {
     "slug": "2026-07-31",
@@ -2507,8 +2588,8 @@
       "Shannon",
       "Bet Sizing"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "公元 55 年左右，一个叫爱比克泰德的弗里吉亚奴隶在罗马帝国开始了他的哲学思考。他的腿被主人故意扭断——据说他全程面带平静，只说了一句：「你会把它弄断的。」后来他获得了自由，在希腊西北部的尼科波利斯开了一所哲学学校，直到公元 135 年去世。他一本书都没有写过。他所有的思想，都是他的学生阿里安像记者一样记录下来的课堂对话，最终编成了两本小册子：《手册》（Enchiridion）和《论说集》（Dis",
+    "excerpt_en": "Around 55 CE, a Phrygian slave named Epictetus began his philosophical inquiry in the Roman Empire. His leg was deliberately broken by his master — according to the account, he remained calm throughou"
   },
   {
     "slug": "2026-07-30",
@@ -2679,7 +2760,7 @@
       "Ma",
       "Japanese Aesthetics"
     ],
-    "excerpt": "",
+    "excerpt": "问一个人\"你懂马桶的工作原理吗？\"绝大多数人会说懂。然后你请他把每一步讲清楚。他卡住了。",
     "excerpt_en": ""
   },
   {
@@ -2795,7 +2876,7 @@
       "Empathy",
       "Mirror Neurons"
     ],
-    "excerpt": "",
+    "excerpt": "你大概以为焦虑是「想太多」的问题。神经科学的答案比你想象的更反直觉：你的肠道可能在给大脑发送焦虑信号，而大脑只是在执行命令。",
     "excerpt_en": ""
   },
   {
@@ -2845,8 +2926,8 @@
       "Energy Policy",
       "Risk Perception"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "1979 年，丹尼尔·卡尼曼和阿莫斯·特沃斯基发表了一篇论文，把经济学界两百年的地基砸了个洞。",
+    "excerpt_en": "In 1979, Daniel Kahneman and Amos Tversky published a paper that punched a hole through two centuries of economic foundations."
   },
   {
     "slug": "2026-07-22",
@@ -2895,7 +2976,7 @@
       "Friend-Shoring",
       "Macroeconomics"
     ],
-    "excerpt": "",
+    "excerpt": "Daniel Kahneman 一辈子做了很多让你不舒服的实验，但 1996 年那场结肠镜检查实验，可能是最让人坐立不安的一个。",
     "excerpt_en": ""
   },
   {
@@ -2941,7 +3022,7 @@
       "Japanese Management",
       "Non-Tech Entrepreneurship"
     ],
-    "excerpt": "",
+    "excerpt": "健身房里至今挂着\"乳酸堆积导致酸痛\"的海报，教练还在让你拉伸\"排乳酸\"。但科学界早在三十年前就翻案了。",
     "excerpt_en": ""
   },
   {
@@ -2983,8 +3064,8 @@
       "Silence",
       "Experimental Music"
     ],
-    "excerpt": "*破界期刊，认知之外，思维之疆。每日探索你不知道你不知道的东西。*",
-    "excerpt_en": "*Horizon Journal — Beyond cognition, across boundaries. Exploring what you didn't know you didn't know.*"
+    "excerpt": "如果你觉得基因编辑是穿着白大褂的科学家在百万美元实验室里干的事，恭喜你，你的认知停留在 2012 年以前。",
+    "excerpt_en": "If you think gene editing is something white-coated scientists do in million-dollar labs, your mental model is stuck in pre-2012."
   },
   {
     "slug": "2026-07-14",
@@ -3021,8 +3102,8 @@
       "Borges",
       "Library of Babel"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "1953年，已经\"解决\"了所有哲学问题的路德维希·维特根斯坦，出版了他死后的第二本书《哲学研究》。在这本书里，他亲手推翻了自己年轻时在《逻辑哲学论》中建立的那座精美建筑——那个宣称\"语言的边界就是世界的边界\"、试图用逻辑原子给世界编号的天才。",
+    "excerpt_en": "In 1953, Ludwig Wittgenstein — the man who had supposedly \"solved\" all of philosophy — published his second posthumous book, *Philosophical Investigations*. In it, he personally demolished the exquisi"
   },
   {
     "slug": "2026-07-13",
@@ -3071,8 +3152,8 @@
       "Self-Fulfilling Prophecy",
       "Expectation Effect"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "1944 年冬天，纳粹占领下的荷兰。盟军在阿纳姆战役中失败，荷兰铁路工人罢工以示支持，德国人的报复来得很快：切断粮食运输。从 1944 年 11 月到 1945 年 5 月解放，荷兰西部大城市每人每天只能分到约 400-800 卡路里的食物——大概是两碗白粥的量。两万多人活活饿死。这就是历史上的 **\"荷兰饥荒之冬\"（Dutch Hunger Winter）**。",
+    "excerpt_en": "In the winter of 1944, Nazi-occupied Netherlands. The Allies had just lost the Battle of Arnhem. Dutch railway workers went on strike to support the Allied advance. The German response was swift and b"
   },
   {
     "slug": "2026-07-12",
@@ -3117,7 +3198,7 @@
       "Japanese Aesthetics",
       "Emptiness"
     ],
-    "excerpt": "",
+    "excerpt": "十九世纪的德国哲学家叔本华（Arthur Schopenhauer）提出过一个让人极度不适的观点：人不是理性的存在，人是\"意志\"的奴隶。这个\"意志\"（Wille）不是指你想吃冰淇淋的那种意志——而是某种更深层、更盲目、永不停歇的生命驱动力。它像一台永远在运转的引擎，驱使你追逐一个目标，达成后给你瞬间的满足，然后在几分钟、几天或几周后，把引擎重新点燃，指向下一个目标。",
     "excerpt_en": ""
   },
   {
@@ -3151,7 +3232,7 @@
       "Pain Science",
       "Chronic Pain"
     ],
-    "excerpt": "",
+    "excerpt": "1901年，一群海绵潜水员在希腊安提基特拉岛附近的海底发现了一艘沉船。在打捞上来的青铜雕像和大理石碎片中，有一块不起眼的、腐蚀成绿色的铜疙瘩。没人多看一眼。它被扔进雅典国家考古博物馆的仓库里，躺了半个世纪。",
     "excerpt_en": ""
   },
   {
@@ -3189,8 +3270,8 @@
       "Legal Tradition",
       "Precedent"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "2016年，一只叫 Inky 的新西兰章鱼从国家水族馆\"越狱\"了。它挤过水箱顶部一条只有几厘米宽的缝隙，滑过地板，钻入一根排水管，消失在南太平洋里。整个过程没有留下任何影像。工作人员第二天早上只看到一条湿漉漉的痕迹，从水箱一直延伸到排水口。",
+    "excerpt_en": "In 2016, a New Zealand octopus named Inky escaped from the National Aquarium. It squeezed through a gap only a few centimeters wide at the top of its tank, slid across the floor, entered a drainpipe, "
   },
   {
     "slug": "2026-07-09",
@@ -3235,7 +3316,7 @@
       "Kintsugi",
       "Imperfection"
     ],
-    "excerpt": "",
+    "excerpt": "1990年，斯坦福大学的博士生 Elizabeth Newton 设计了一个后来成为社会心理学经典教材的实验。她让一组参与者扮演\"击节者\"，用手敲击一段耳熟能详的旋律（比如《生日快乐》或《星条旗永不落》）；另一组扮演\"听者\"，仅凭敲击的节奏判断是哪首歌。",
     "excerpt_en": ""
   },
   {
@@ -3283,7 +3364,7 @@
       "Whanganui River",
       "Legal Person"
     ],
-    "excerpt": "",
+    "excerpt": "2012年，罗切斯特大学的 Maiken Nedergaard 团队在 *Science* 上发表了一篇让整个神经科学界重新理解睡眠的论文。他们发现大脑里有一套此前从未被描述的清洁系统——**类淋巴系统（Glymphatic System）**。",
     "excerpt_en": ""
   },
   {
@@ -3327,7 +3408,7 @@
       "Water Resources",
       "GRACE Satellite"
     ],
-    "excerpt": "",
+    "excerpt": "2001年，神经科学家 Marcus Raichle 在 fMRI 实验中发现了一个反直觉的现象：当受试者躺在扫描仪里\"什么都不做\"时，大脑某些区域反而比执行任务时更加活跃。他给这个网络取了个名字——**默认模式网络（Default Mode Network, DMN）**。",
     "excerpt_en": ""
   },
   {
@@ -3373,8 +3454,8 @@
       "Environmental Policy",
       "Producer Responsibility"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "1971年，哈佛哲学家约翰·罗尔斯抛出了一个思想实验，它简单到可以用两句话说完，却足以掀翻几千年来的政治哲学传统。",
+    "excerpt_en": "In 1971, Harvard philosopher John Rawls proposed a thought experiment simple enough to be stated in two sentences, yet powerful enough to upend millennia of political philosophy."
   },
   {
     "slug": "2026-07-03",
@@ -3417,7 +3498,7 @@
       "Fat Oxidation",
       "Foundational Revolution"
     ],
-    "excerpt": "",
+    "excerpt": "1997年，加拿大森林生态学家 Suzanne Simard 在 *Nature* 上发表了一篇后来被引用数千次的论文。她用放射性碳同位素追踪了桦树和花旗松之间的碳流动，发现了一件当时让人难以置信的事：**森林里的树不是竞争对手，它们在互相喂食。** 桦树把光合作用产生的碳，通过地下真菌网络输送给被遮荫的花旗松幼苗。夏天花旗松光合作用强时，碳又反方向流回桦树。",
     "excerpt_en": ""
   },
   {
@@ -3467,7 +3548,7 @@
       "Democratic Design",
       "Gropius"
     ],
-    "excerpt": "",
+    "excerpt": "提到大脑，多数人的想象是一团湿漉漉的神经元窝在颅骨里。但从演化的角度看，这可能是对的——只不过大脑不止一个。",
     "excerpt_en": ""
   },
   {
@@ -3507,7 +3588,7 @@
       "Everyday Art",
       "Event Scores"
     ],
-    "excerpt": "",
+    "excerpt": "你有没有经历过这种情况：面对一个看起来很合理的选项，身体却有种说不清的不舒服？或者反过来，明明逻辑上风险很大，但\"直觉\"告诉你应该上？",
     "excerpt_en": ""
   },
   {
@@ -3557,7 +3638,7 @@
       "Bolivia",
       "Argentina"
     ],
-    "excerpt": "",
+    "excerpt": "你大概听说过 CRISPR。一把分子剪刀，能精准剪切、替换 DNA 片段，2012 年横空出世，2020 年拿了诺贝尔化学奖。但 CRISPR 真正的\"核武器\"级应用你可能没听说过——**基因驱动 (Gene Drive)。**",
     "excerpt_en": ""
   },
   {
@@ -3605,7 +3686,7 @@
       "Law and Economics",
       "Social Cost"
     ],
-    "excerpt": "",
+    "excerpt": "2005 年，认知科学家 Lera Boroditsky 在 MIT 做了一个简单的实验。她让俄语使用者和英语使用者区分屏幕上的蓝色方块。俄语的结果显著快于英语。原因不是俄国人眼睛更好——是俄语里根本没有\"蓝色\"这个词。",
     "excerpt_en": ""
   },
   {
@@ -3665,7 +3746,7 @@
       "Concentrated Benefits Diffuse Costs",
       "Rational Ignorance"
     ],
-    "excerpt": "",
+    "excerpt": "1970 年代末，Elizabeth Blackburn 在耶鲁的实验室里发现了一件怪事。她研究的对象是一种叫四膜虫（Tetrahymena）的单细胞池塘生物——它的染色体末端有一段重复序列，不编码任何蛋白质，就是 TTGGGG 一遍又一遍地重复。Blackburn 和她的研究生 Carol Greider 最终搞清楚了这是什么：保护帽。端粒（telomeres）。每次细胞分裂，端粒就短一截。当它",
     "excerpt_en": ""
   },
   {
@@ -3717,8 +3798,8 @@
       "Perspective Shift",
       "Frank White"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "如果你父母都有糖尿病，你一定会得糖尿病——对吗？",
+    "excerpt_en": "If both your parents have diabetes, you're doomed to get it too — right?"
   },
   {
     "slug": "2026-06-24",
@@ -3773,7 +3854,7 @@
       "Indian Mathematics",
       "Paradigm Shift"
     ],
-    "excerpt": "",
+    "excerpt": "闭眼。摸一下你的鼻尖。你怎么做到的？",
     "excerpt_en": ""
   },
   {
@@ -4039,7 +4120,7 @@
       "Gut-Brain Axis",
       "Food Science"
     ],
-    "excerpt": "",
+    "excerpt": "# 你的细胞里住着远古细菌——线粒体霸权、土壤的隐秘智能、包豪斯的百年幽灵与食品工业的神经黑客",
     "excerpt_en": ""
   },
   {
@@ -4083,7 +4164,7 @@
       "International Law",
       "UNCLOS"
     ],
-    "excerpt": "",
+    "excerpt": "# 章鱼的手臂在替你思考——分布式意识、海德格尔的锤子、巴赫的递归函数与大西洋的末日开关",
     "excerpt_en": ""
   },
   {
@@ -4117,7 +4198,7 @@
       "Perspectivism",
       "Narrative Plurality"
     ],
-    "excerpt": "",
+    "excerpt": "# 你的免疫系统在替你思考——神经免疫学、债券义警、海底光缆暗战与罗生门的真相",
     "excerpt_en": ""
   },
   {
@@ -4155,7 +4236,7 @@
       "Consumer Welfare Standard",
       "Neo-Brandeisian"
     ],
-    "excerpt": "",
+    "excerpt": "# 你的基因是开源代码——水平基因转移、货币主权、消极能力与反垄断的意识形态战争",
     "excerpt_en": ""
   },
   {
@@ -4193,7 +4274,7 @@
       "Comparative Law",
       "AI Governance"
     ],
-    "excerpt": "**破界行动清单**",
+    "excerpt": "1970 年代，加拿大作曲家 R. Murray Schafer 发明了一个词：soundscape——声景。他说，世界不仅是一幅画，也是一场音乐会。但他真正想说的是另一件事：现代人在声景里溺水了，而且不知道自己在溺水。",
     "excerpt_en": ""
   },
   {
@@ -4237,7 +4318,7 @@
       "Illegal Fishing",
       "BBNJ Treaty"
     ],
-    "excerpt": "**破界行动清单**",
+    "excerpt": "2026 年 5 月，一篇发表在《临床与转化医学》上的综述论文平静地宣布了一件事：量子生物学已经不是边缘学科了。量子相干、隧穿效应、自旋依赖过程——这些听起来像低温物理实验室专利的现象，在温暖、潮湿、混乱的活细胞里同样存在。而且进化论已经利用了它们几十亿年，比人类搞出第一台量子计算机早了那么一点点。",
     "excerpt_en": ""
   },
   {
@@ -4275,8 +4356,8 @@
       "Biodiversity",
       "Food Microbiology"
     ],
-    "excerpt": "**破界行动清单**",
-    "excerpt_en": "**Horizon Action List**"
+    "excerpt": "2024 年 1 月，法国考古学家 Stéphen Rostain 在 *Science* 上发表了一篇论文，标题平淡无奇——换谁看了都会以为是又挖出几个陶罐。但卫星和 LiDAR 扫描的结果让整个考古学界炸了锅：厄瓜多尔的乌帕诺河谷（Upano Valley）底下，埋着一整座网络化的城市群。六千多个人工平台、复杂的道路系统、规划整齐的农田——这可不是\"小部落聚居地\"，这是一个公元前 500 年就",
+    "excerpt_en": "In January 2024, French archaeologist Stéphen Rostain published a paper in *Science* with an innocuous-sounding title. But what LiDAR and satellite imagery revealed made the archaeology world collecti"
   },
   {
     "slug": "2026-05-21",
@@ -4315,7 +4396,7 @@
       "Behavioral Economics",
       "Sunk Cost"
     ],
-    "excerpt": "1. **出门找到一棵老树，摸一下它的树干。** 现在你知道它脚底下有一张比你公司内网更复杂、更古老的网络在运转。花 30 秒感受一下这件事。",
+    "excerpt": "你在楼上写代码的时候，脚底下的树正在用一套比你路由器更稳定的网络交换信息。这不是比喻。",
     "excerpt_en": ""
   },
   {
@@ -4355,8 +4436,8 @@
       "Wittgenstein",
       "Language Games"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "2026 年 1 月，*Mammalian Genome* 发表了一篇重磅综述，标题直白得像一篇宣言：*《战争的基因遗产——跨代 PTSD 遗传的分子基础探索》*。两位作者 Džaferović 和 Ašić 系统梳理了数十项研究后得出一个结论：**压力真的可以被写入 DNA，并传给下一代。**",
+    "excerpt_en": "In January 2026, *Mammalian Genome* published a major review with a title that reads like a manifesto: *\"Genetic Heritage of War: Exploring Transgenerational Inheritance of PTSD and Its Molecular Back"
   },
   {
     "slug": "2026-05-19",
@@ -4385,7 +4466,7 @@
       "Gift Economy",
       "Anthropology"
     ],
-    "excerpt": "",
+    "excerpt": "太平洋海底，水深 4000 到 6000 米的地方，铺满了土豆大小的黑色石块。它们叫**多金属结核（Polymetallic Nodules）**——含有锰、镍、钴、铜和微量稀土元素。这些石头花了几百万年，在绝对的黑暗中以每百万年几毫米的速度生长，现在它们被一群矿业公司盯上了，因为全球电动化转型需要巨量的钴和镍。",
     "excerpt_en": ""
   },
   {
@@ -4413,7 +4494,7 @@
       "Cross-Border Tax",
       "Territorial Taxation"
     ],
-    "excerpt": "",
+    "excerpt": "1960 年 11 月，一群法国作家和数学家聚在巴黎，成立了一个听起来像技术社团的组织：**Oulipo**（Ouvroir de littérature potentielle，潜在文学工场）。联合创始人雷蒙·格诺用一句话定义了它的精神：「我们是建造迷宫、并计划从中逃脱的老鼠。」",
     "excerpt_en": ""
   },
   {
@@ -4443,7 +4524,7 @@
       "Camus",
       "Absurdism"
     ],
-    "excerpt": "",
+    "excerpt": "达尔文在《物种起源》出版几年后注意到一个诡异的规律：**几乎所有的家养动物都共享一组看似无关的特征。** 狗、猫、猪、牛、羊——驯化后的版本比野生祖先拥有更短的吻部、更小的牙齿、更柔软的耳朵、更浅的毛色、更小的脑容量、以及更强的幼态特征（成年后仍然保留幼年行为）。他甚至在家养的兔子和驯化的狐狸身上看到了同样的模式。",
     "excerpt_en": ""
   },
   {
@@ -4471,8 +4552,8 @@
       "Debt Cycle",
       "Countercyclical Business"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "大多数人对大脑的想象是：一个封闭在颅骨里的超级计算机，接收信号，发出指令。但这幅图景缺了关键的一块——**肠道里住着一套独立神经系统，约 5 亿个神经元沿着消化道分布，数量相当于一只猫的大脑。** 它叫\"肠神经系统\"（Enteric Nervous System），和中枢神经系统通过迷走神经实时通信。更有趣的是，寄居在肠道里的 39 万亿微生物——细菌、真菌、病毒——是这个系统的共同管理者。",
+    "excerpt_en": "Most people imagine the brain as a supercomputer sealed inside the skull, receiving signals and issuing commands. But this picture misses a critical piece: **there's an independent nervous system lini"
   },
   {
     "slug": "2026-05-15",
@@ -4501,7 +4582,7 @@
       "Rare Earths",
       "Geopolitics"
     ],
-    "excerpt": "",
+    "excerpt": "有一个数字比胆固醇、血压、基因检测更能预测你能活多久——**VO₂max（最大摄氧量）**。它不是实验室里的抽象指标，而是衡量你身体这台\"硬件\"还剩多少运算能力的核心参数。",
     "excerpt_en": ""
   },
   {
@@ -4527,8 +4608,8 @@
       "Chronobiology",
       "Silver Economy"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "神经科学家 Anil Seth 提出了一个颠覆性的观点：**大脑不是被动接收现实，而是主动预测现实。** 看到的、听到的、感受到的一切，都是大脑根据过往经验生成的\"最佳猜测\"，然后不断用感官输入修正。换句话说，每个人时刻都活在一场\"受控的幻觉\"里。两个人目睹同一件事却得出完全不同的结论，不是因为谁在说谎，而是他们的大脑在运行不同的预测模型。",
+    "excerpt_en": "Neuroscientist Anil Seth proposed a paradigm-shifting idea: **the brain is not passively receiving reality — it is actively predicting it.** Everything seen, heard, and felt is the brain's \"best guess"
   },
   {
     "slug": "2026-05-10",
@@ -4551,8 +4632,8 @@
       "Health",
       "Decision Making"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "你大概听过\"人一天需要 7-8 小时睡眠\"。但少有人理解的是：**睡眠不足的影响不是线性的，是指数累积的。**",
+    "excerpt_en": "You've heard \"7-8 hours of sleep.\" What few understand: **the effects of sleep deprivation are not linear — they compound exponentially.**"
   },
   {
     "slug": "2026-05-07",
@@ -4575,8 +4656,8 @@
       "Wittgenstein",
       "Cognition"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "Prompt engineering 被广泛讨论为\"与 AI 对话的技巧\"。但它的真正本质是：你输入的每一个 token 都在调整一个万亿参数的概率分布。你在做的是通过语言引导概率——不是\"命令\"，不是\"编程\"，是\"概率导航\"。",
+    "excerpt_en": "Prompt engineering is widely discussed as \"the skill of talking to AI.\" But its real essence: every token you input adjusts a trillion-parameter probability distribution. You're doing probability navi"
   },
   {
     "slug": "2026-05-03",
@@ -4599,8 +4680,8 @@
       "Productivity",
       "Deep Work"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "1971 年，Herbert Simon 说了一句现在读来像预言的话：\"信息的丰富意味着注意力的贫乏。\" 2026 年的今天，这句话变成了物理定律。",
+    "excerpt_en": "In 1971, Herbert Simon said something that now reads like prophecy: \"A wealth of information creates a poverty of attention.\" In 2026, this has become physical law. Of 17 waking hours per day, the ave"
   },
   {
     "slug": "2026-04-29",
@@ -4623,8 +4704,8 @@
       "Antifragility",
       "Risk"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "2003 年 8 月 14 日，美国东北部大停电影响了 5500 万人，造成 60 亿美元损失。引发整个灾难的，是俄亥俄州一棵树碰到了输电线。",
+    "excerpt_en": "August 14, 2003. A tree in Ohio touched a power line. The resulting cascade blacked out the US Northeast, affecting 55 million people and causing $6 billion in damage. One tree took down an entire gri"
   },
   {
     "slug": "2026-04-26",
@@ -4647,8 +4728,8 @@
       "Product Design",
       "Cognitive Bias"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "1996 年，Daniel Kahneman 做了一个实验。他让两组人把手放进冰水中。A 组在 14°C 的水中放 60 秒。B 组同样 14°C 放 60 秒，然后水温悄悄升到 15°C 再放 30 秒。",
+    "excerpt_en": "In 1996, Daniel Kahneman asked two groups to hold their hands in ice water. Group A: 14°C for 60 seconds. Group B: same 14°C for 60 seconds, then temperature silently rose to 15°C for 30 more seconds."
   },
   {
     "slug": "2026-04-22",
@@ -4669,8 +4750,8 @@
       "Note-taking",
       "Metacognition"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "2011 年，哥伦比亚大学 Betsy Sparrow 做了一个著名实验。她让参与者阅读一系列琐事，然后告诉一半人这些信息被保存到了电脑上。结果：**被告知\"已保存\"的人，对信息本身的记忆显著变差——但他们精准地记住了信息被存在哪里。**",
+    "excerpt_en": "In 2011, Columbia University's Betsy Sparrow ran a famous experiment. Participants read trivia, then half were told it was saved to a computer. Result: those told \"it's saved\" remembered the content w"
   },
   {
     "slug": "2026-04-19",
@@ -4693,8 +4774,8 @@
       "Decision Making",
       "Cognitive Bias"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "设想一个场景：你花了三个月，把自己日常的工作习惯、决策偏好、写作风格都\"喂\"给了一个 AI Agent。三个月后，你让它独立处理一些任务。结果非常像你——像到你自己都分不清哪些是你亲手做的。",
+    "excerpt_en": "Spend three months feeding an AI agent your work habits, decision preferences, and writing style. Then let it handle tasks independently. The output is uncannily like you. But in the process of making"
   },
   {
     "slug": "2026-04-16",
@@ -4717,7 +4798,7 @@
       "Automation",
       "Product Design"
     ],
-    "excerpt": "",
-    "excerpt_en": ""
+    "excerpt": "人类的历史，几乎和工具的历史等长。从石器到蒸汽机，从算盘到计算机——工具始终在\"被使用\"的位置。但过去三年发生了一件从未有过的事：工具开始使用工具。",
+    "excerpt_en": "Human history is almost as long as the history of tools. From stone axes to steam engines, from abacuses to computers — tools have always been in the position of \"being used.\" But something unpreceden"
   }
 ]

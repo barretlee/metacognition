@@ -35,7 +35,14 @@ for e in data['editions']:
     for lang, key in [('md', 'excerpt'), ('en.md', 'excerpt_en')]:
         try:
             with open(f'issues/{slug}.{lang}') as f:
-                body = f.read().split('---\n')[-1].strip()
+                # Only strip the leading YAML frontmatter block; splitting on
+                # every '---' hits the horizontal rules inside the article body.
+                raw = f.read().lstrip('\ufeff')
+                if raw.startswith('---'):
+                    parts = raw.split('---\n', 2)
+                    body = parts[2].strip() if len(parts) == 3 else raw
+                else:
+                    body = raw.strip()
                 for line in body.split('\n'):
                     clean = line.strip()
                     if clean and not clean.startswith('##') and not clean.startswith('>') and not clean.startswith('|'):
