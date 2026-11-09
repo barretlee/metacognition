@@ -45,7 +45,7 @@ for e in data['editions']:
                     body = raw.strip()
                 for line in body.split('\n'):
                     clean = line.strip()
-                    if clean and not clean.startswith('##') and not clean.startswith('>') and not clean.startswith('|'):
+                    if clean and not clean.startswith('#') and not clean.startswith('>') and not clean.startswith('|') and not clean.startswith('---'):
                         entry[key] = clean[:200]
                         break
         except:
@@ -63,10 +63,15 @@ def rss_date(d):
     dt = datetime.strptime(d, '%Y-%m-%d')
     return dt.strftime('%a, %d %b %Y 00:00:00 +0800')
 
+def xml_escape(s):
+    # Titles are interpolated into XML text nodes; unescaped '&' (e.g. 'R&D')
+    # makes the whole feed unparseable for readers.
+    return (s or '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
 # Generate zh.xml
 zh_items = []
 for e in entries:
-    title = e['title']
+    title = xml_escape(e['title'])
     link = f\"{base_url}/{e['slug_en']}\"
     desc = e['excerpt'][:500]
     date_rss = rss_date(e['date'])
@@ -97,7 +102,7 @@ with open('feed/zh.xml', 'w') as f:
 # Generate en.xml
 en_items = []
 for e in entries:
-    title_en = e.get('title_en', e['title'])
+    title_en = xml_escape(e.get('title_en') or e['title'])
     link = f\"{base_url}/en/{e['slug_en']}\"
     desc = e['excerpt_en'][:500]
     date_rss = rss_date(e['date'])

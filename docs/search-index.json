@@ -1,5 +1,103 @@
 [
   {
+    "slug": "2026-11-09",
+    "slug_en": "overnight-anchor-and-the-average-that-lies",
+    "date": "2026-11-09",
+    "dateDisplay": "2026年11月9日",
+    "title": "央行把政策利率的锚从七天换到了隔夜——你以为在看降息，其实在看一条河换了水位标；以及一只单细胞绿藻如何让人类能点亮大脑里某个特定的神经元、一场用岛和两对夫妻证明『人口爆炸』结论是平均值幻觉的吵架、一个把『预期』写进模型就拿了诺奖的老先生，和你家窗外那 50 分贝正在替你加速老化",
+    "title_en": "The Central Bank Moved Its Rate Anchor from Seven Days to Overnight — You Thought You Were Watching a Rate Cut, but You Were Watching a River Swap Its Gauge; Plus How a Single-Celled Alga Let Us Switch On One Specific Neuron, an Argument That Uses an Island and Two Couples to Prove 'Overpopulation' Is an Average-Value Illusion, an Economist Who Won a Nobel for Writing 'Expectations' Into the Model, and the 50 Decibels Outside Your Window Aging You Faster",
+    "tags": [
+      "政策利率",
+      "隔夜逆回购",
+      "DR001",
+      "利率走廊",
+      "价格型调控",
+      "潘功胜",
+      "金融街论坛",
+      "公开市场操作",
+      "货币政策框架",
+      "光遗传学",
+      "optogenetics",
+      "通道视紫红质",
+      "channelrhodopsin",
+      "Deisseroth",
+      "Hegemann",
+      "Nagel",
+      "莱茵衣藻",
+      "诺奖",
+      "因果干预",
+      "承载力",
+      "carrying capacity",
+      "Bradshaw",
+      "Ehrlich",
+      "Millward-Hopkins",
+      "生态足迹",
+      "overshoot",
+      "Ricker模型",
+      "不平等",
+      "基尼系数",
+      "纽扣实验",
+      "霍尔",
+      "伍德福德",
+      "Hall",
+      "Woodford",
+      "自然利率",
+      "预期管理",
+      "通胀目标制",
+      "可信度",
+      "交通噪音",
+      "心血管",
+      "分贝",
+      "睡眠",
+      "AHA",
+      "非听觉通路",
+      "噪音剂量"
+    ],
+    "tags_en": [
+      "policy rate",
+      "overnight reverse repo",
+      "DR001",
+      "interest rate corridor",
+      "price-based monetary policy",
+      "Pan Gongsheng",
+      "Financial Street Forum",
+      "open market operations",
+      "monetary policy framework",
+      "optogenetics",
+      "channelrhodopsin",
+      "Deisseroth",
+      "Hegemann",
+      "Nagel",
+      "Chlamydomonas",
+      "Nobel Prize",
+      "causal intervention",
+      "carrying capacity",
+      "Bradshaw",
+      "Ehrlich",
+      "Millward-Hopkins",
+      "ecological footprint",
+      "overshoot",
+      "Ricker model",
+      "inequality",
+      "Gini coefficient",
+      "Hall",
+      "Woodford",
+      "natural rate of interest",
+      "expectations management",
+      "inflation targeting",
+      "credibility",
+      "transportation noise",
+      "cardiovascular",
+      "decibels",
+      "sleep",
+      "AHA",
+      "non-auditory pathway",
+      "noise dose"
+    ],
+    "excerpt": "今天是周一。今天五个板块共用一条暗线，我先把这条线放这儿：**你用来理解世界的几乎所有指标，都是平均值。而当分布偏得厉害的时候，平均值不是一个\"典型情况\"，它是一个不存在的数。** 它不撒谎，它只是不再承载你想从它身上读到的那个信息。",
+    "excerpt_en": ""
+  },
+  {
     "slug": "2026-11-07",
     "slug_en": "knowledge-half-life-and-the-catalog-that-outlived-its-author",
     "date": "2026-11-07",
@@ -103,7 +201,7 @@
       "Waiting Cost",
       "Metric Blind Spot"
     ],
-    "excerpt": "# 破界日报 · 第 96 期",
+    "excerpt": "今天五个板块之间有一个暗线：**有些东西因为被维护而活着，有些东西恰恰因为被忽略而活着；而判断哪一种，需要的不是知识量，是一个准确的\"坐标\"。**",
     "excerpt_en": ""
   },
   {
@@ -4226,7 +4324,7 @@
       "Gut-Brain Axis",
       "Food Science"
     ],
-    "excerpt": "# 你的细胞里住着远古细菌——线粒体霸权、土壤的隐秘智能、包豪斯的百年幽灵与食品工业的神经黑客",
+    "excerpt": "绝大多数人对\"健康\"的理解到\"少吃多动\"就结束了。但如果把身体看作一个计算系统，这种理解相当于\"重启一下就好了\"——它不是错，只是粒度太粗。",
     "excerpt_en": ""
   },
   {
@@ -4270,7 +4368,7 @@
       "International Law",
       "UNCLOS"
     ],
-    "excerpt": "# 章鱼的手臂在替你思考——分布式意识、海德格尔的锤子、巴赫的递归函数与大西洋的末日开关",
+    "excerpt": "你有一个大脑，你的意识住在一个地方。章鱼有大约 5 亿个神经元，但只有三分之一集中在一个中央脑里。剩下的三分之二分布在八条腕足中——每条腕足都有自己的神经节，能够独立感知、独立运动、甚至\"自己做决定\"。当一条腕足被切断，它会继续抓取食物，试图把食物送到一个已经不存在的嘴里。",
     "excerpt_en": ""
   },
   {
@@ -4304,7 +4402,7 @@
       "Perspectivism",
       "Narrative Plurality"
     ],
-    "excerpt": "# 你的免疫系统在替你思考——神经免疫学、债券义警、海底光缆暗战与罗生门的真相",
+    "excerpt": "我们习惯把大脑当成思维的硬件，身体当成傻大黑粗的外设。这个模型正在被神经免疫学撕成碎片。",
     "excerpt_en": ""
   },
   {
@@ -4342,7 +4440,7 @@
       "Consumer Welfare Standard",
       "Neo-Brandeisian"
     ],
-    "excerpt": "# 你的基因是开源代码——水平基因转移、货币主权、消极能力与反垄断的意识形态战争",
+    "excerpt": "我们从小被教的那棵\"生命之树\"——基因从父母传给子女，分支缓慢分叉，演化成一棵漂亮的系统发生树——在很大程度上是一个谎言。或者说，是一个过于整洁的简化。",
     "excerpt_en": ""
   },
   {
